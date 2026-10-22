@@ -1,0 +1,158 @@
+{
+  "course": "html-css",
+  "unit": {
+    "id": "unit1",
+    "title": "ساختار صفحه و تگ‌ها",
+    "description": "اسکلت یک صفحه وب را می‌سازیم."
+  },
+  "lessons": [
+    {
+      "id": "html-1-1",
+      "title": "اولین صفحه HTML",
+      "intro": "HTML زبان نشانه‌گذاری صفحه وب است. تگ‌ها ساختار محتوا را مشخص می‌کنند. هر سند با <!doctype html> شروع می‌شود و محتوای قابل‌نمایش داخل body قرار می‌گیرد.\nمثال:\n<!doctype html><html><body><h1>سلام دنیا</h1></body></html>",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "HTML برای چه کاری استفاده می‌شود؟",
+          "explanation": "HTML ساختار و معنای محتوای صفحه را مشخص می‌کند.",
+          "options": [
+            "ساختار صفحه وب",
+            "ذخیره دیتابیس",
+            "فشرده‌سازی عکس"
+          ],
+          "answer": "ساختار صفحه وب"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام تگ عنوان بزرگ می‌سازد؟",
+          "explanation": "h1 عنوان سطح اول است.",
+          "options": [
+            "<h1>",
+            "<img>",
+            "<br>"
+          ],
+          "answer": "<h1>"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "تگ محتوای اصلی صفحه چیست؟",
+          "explanation": "محتوای نمایشی معمولاً در body قرار می‌گیرد.",
+          "code": "<html><____>سلام</body></html>",
+          "answer": "body"
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط را به ترتیب درست بچین.",
+          "explanation": "سند با doctype و سپس html آغاز می‌شود.",
+          "lines": [
+            "</html>",
+            "<!doctype html>",
+            "<html>"
+          ],
+          "answer": [
+            "<!doctype html>",
+            "<html>",
+            "</html>"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "متن داخل عنوان چه چیزی نمایش می‌دهد؟",
+          "explanation": "متن داخل تگ h1 به عنوان اصلی نمایش داده می‌شود.",
+          "code": "<h1>سلام دنیا</h1>",
+          "options": [
+            "سلام دنیا",
+            "h1",
+            "هیچ‌چیز"
+          ],
+          "answer": "سلام دنیا"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک عنوان با متن شروع بساز.",
+          "explanation": "تگ h1 برای عنوان اصلی است.",
+          "starter_code": "<h1>شروع من</h1>",
+          "tests": [
+            {
+              "expected_output": "<h1>شروع من</h1>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-1-2",
+      "title": "پاراگراف و تیترها",
+      "intro": "برای تیترها از h1 تا h6 استفاده می‌کنیم و برای پاراگراف از p. ترتیب تیترها به خوانایی و دسترس‌پذیری کمک می‌کند.\nمثال:\n<h1>درباره من</h1><p>من تازه کدنویسی را شروع کرده‌ام.</p>",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "تگ پاراگراف کدام است؟",
+          "explanation": "p مخفف paragraph است.",
+          "options": [
+            "<p>",
+            "<title>",
+            "<section>"
+          ],
+          "answer": "<p>"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با تگ شروع پاراگراف پر کن.",
+          "explanation": "پاراگراف با p شروع می‌شود.",
+          "code": "____>متن من</p>",
+          "answer": "<p"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام تیتر از نظر سطح بالاتر است؟",
+          "explanation": "h1 عنوان سطح اول است.",
+          "options": [
+            "h1",
+            "h4",
+            "h6"
+          ],
+          "answer": "h1"
+        },
+        {
+          "type": "reorder",
+          "prompt": "کد را مرتب کن.",
+          "explanation": "ابتدا تیتر، سپس پاراگراف قرار می‌گیرد.",
+          "lines": [
+            "<p>متن</p>",
+            "<h1>عنوان</h1>"
+          ],
+          "answer": [
+            "<h1>عنوان</h1>",
+            "<p>متن</p>"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "کدام متن در پاراگراف دیده می‌شود؟",
+          "explanation": "محتوای داخل p نمایش داده می‌شود.",
+          "code": "<p>یادگیری جذابه</p>",
+          "options": [
+            "یادگیری جذابه",
+            "p",
+            "خطا"
+          ],
+          "answer": "یادگیری جذابه"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک پاراگراف بساز که متنش «سلام» باشد.",
+          "explanation": "از تگ p استفاده کن.",
+          "starter_code": "<p>سلام</p>",
+          "tests": [
+            {
+              "expected_output": "<p>سلام</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
