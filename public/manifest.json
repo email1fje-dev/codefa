@@ -1,0 +1,20 @@
+{
+  "name": "کدفا | یادگیری برنامه‌نویسی",
+  "short_name": "کدفا",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/app.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f8f5",
+  "theme_color": "#35b86b",
+  "description": "یادگیری بازی‌وار برنامه‌نویسی به زبان فارسی",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
