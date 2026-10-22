@@ -70,7 +70,7 @@
           "type": "code_exercise",
           "prompt": "یک متغیر const با نام city و مقدار 'Tehran' بساز.",
           "explanation": "از const و رشته داخل کوتیشن استفاده کن.",
-          "starter_code": "const city = 'Tehran';",
+          "starter_code": "const city = 'Tehran';\nconsole.log(city);",
           "tests": [
             {
               "expected_output": "Tehran"
@@ -143,7 +143,7 @@
           "type": "code_exercise",
           "prompt": "یک متغیر age با مقدار 13 تعریف کن.",
           "explanation": "از let یا const استفاده کن.",
-          "starter_code": "const age = 13;",
+          "starter_code": "const age = 13;\nconsole.log(age);",
           "tests": [
             {
               "expected_output": "13"
