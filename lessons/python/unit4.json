@@ -38,7 +38,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "for city in ['قم', 'رشت']:",
+          "code": "____ city in ['قم', 'رشت']:\n    print(city)\n",
           "answer": "for",
           "language": "python",
           "hints": [
@@ -56,8 +56,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "for city in ['قم', 'رشت']:",
-            "    print(city)"
+            "    print(city)",
+            "for city in ['قم', 'رشت']:"
           ],
           "answer": [
             "for city in ['قم', 'رشت']:",
@@ -176,7 +176,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "for i in range(3):",
+          "code": "for i in ____(3):\n    print(i)\n",
           "answer": "range",
           "language": "python",
           "hints": [
@@ -194,8 +194,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "for i in range(3):",
-            "    print(i)"
+            "    print(i)",
+            "for i in range(3):"
           ],
           "answer": [
             "for i in range(3):",
@@ -314,7 +314,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = 1",
+          "code": "n = 1\n____ n <= 3:\n    print(n)\n    n += 1\n",
           "answer": "while",
           "language": "python",
           "hints": [
@@ -332,10 +332,10 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "n = 1",
-            "while n <= 3:",
+            "    n += 1",
             "    print(n)",
-            "    n += 1"
+            "while n <= 3:",
+            "n = 1"
           ],
           "answer": [
             "n = 1",
@@ -456,7 +456,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = 0",
+          "code": "____ = 0\nfor price in [1000, 2000]:\n    total += price\nprint(total)\n",
           "answer": "total",
           "language": "python",
           "hints": [
@@ -474,10 +474,10 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "total = 0",
-            "for price in [1000, 2000]:",
+            "print(total)",
             "    total += price",
-            "print(total)"
+            "for price in [1000, 2000]:",
+            "total = 0"
           ],
           "answer": [
             "total = 0",
