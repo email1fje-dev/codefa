@@ -38,7 +38,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = 'شیراز'",
+          "code": "____ = 'شیراز'\nprint(city)\n",
           "answer": "city",
           "language": "python",
           "hints": [
@@ -56,8 +56,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "city = 'شیراز'",
-            "print(city)"
+            "print(city)",
+            "city = 'شیراز'"
           ],
           "answer": [
             "city = 'شیراز'",
@@ -176,7 +176,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = int('13')",
+          "code": "age = ____('13')\nprint(age + 1)\n",
           "answer": "int",
           "language": "python",
           "hints": [
@@ -194,8 +194,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "age = int('13')",
-            "print(age + 1)"
+            "print(age + 1)",
+            "age = int('13')"
           ],
           "answer": [
             "age = int('13')",
@@ -314,7 +314,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = 'پارسا'",
+          "code": "____ = 'پارسا'\nprint('سلام', name)\n",
           "answer": "name",
           "language": "python",
           "hints": [
@@ -332,8 +332,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "name = 'پارسا'",
-            "print('سلام', name)"
+            "print('سلام', name)",
+            "name = 'پارسا'"
           ],
           "answer": [
             "name = 'پارسا'",
@@ -452,7 +452,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = True",
+          "code": "is_student = ____\nprint(is_student)\n",
           "answer": "True",
           "language": "python",
           "hints": [
@@ -470,8 +470,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "is_student = True",
-            "print(is_student)"
+            "print(is_student)",
+            "is_student = True"
           ],
           "answer": [
             "is_student = True",
