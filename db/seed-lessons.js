@@ -3,7 +3,7 @@ const path = require('path');
 const pool = require('./pool');
 
 function validateExercises(exercises, lessonTitle) {
- if (!Array.isArray(exercises) || exercises.length < 6) throw new Error('درس باید دست‌کم ۶ تمرین داشته باشد: ' + lessonTitle);
+ if (!Array.isArray(exercises) || exercises.length < 6 || exercises.length > 10) throw new Error('هر درس باید بین ۶ تا ۱۰ تمرین داشته باشد: ' + lessonTitle);
  const allowed = new Set(['multiple_choice','fill_blank','reorder','code_exercise','predict_output','web_exercise']);
  for (const [i,e] of exercises.entries()) {
   if (!e || !allowed.has(e.type) || typeof e.prompt !== 'string' || typeof e.explanation !== 'string') throw new Error('ساختار تمرین شماره ' + (i+1) + ' در «' + lessonTitle + '» نامعتبر است.');
