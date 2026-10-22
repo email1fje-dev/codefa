@@ -1,0 +1,158 @@
+{
+  "course": "javascript",
+  "unit": {
+    "id": "unit4",
+    "title": "تابع‌ها",
+    "description": "کد را به بخش‌های قابل استفاده مجدد تقسیم کن."
+  },
+  "lessons": [
+    {
+      "id": "js-4-1",
+      "title": "تعریف تابع",
+      "intro": "تابع مجموعه‌ای از دستورهاست که می‌توانیم آن را با نامش اجرا کنیم. پارامترها ورودی می‌گیرند و return نتیجه را برمی‌گرداند.\nمثال:\nfunction double(n) { return n * 2; }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام کلمه تابع معمولی را تعریف می‌کند؟",
+          "explanation": "function کلمه کلیدی تعریف تابع است.",
+          "options": [
+            "function",
+            "func",
+            "method"
+          ],
+          "answer": "function"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "تابع greet را تعریف کن.",
+          "explanation": "تعریف تابع با function آغاز می‌شود.",
+          "code": "____ greet() { return 'hi'; }",
+          "answer": "function"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "return چه می‌کند؟",
+          "explanation": "نتیجه تابع را برمی‌گرداند.",
+          "options": [
+            "برگرداندن نتیجه",
+            "شروع حلقه",
+            "تعریف متغیر"
+          ],
+          "answer": "برگرداندن نتیجه"
+        },
+        {
+          "type": "reorder",
+          "prompt": "تابع را مرتب کن.",
+          "explanation": "نام و پرانتز بعد از function می‌آید.",
+          "lines": [
+            "return 2;",
+            "function answer() {",
+            "}"
+          ],
+          "answer": [
+            "function answer() {",
+            "return 2;",
+            "}"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "تابع مقدار دو برابر 4 را برمی‌گرداند.",
+          "code": "function double(n){return n*2;} console.log(double(4));",
+          "options": [
+            "4",
+            "8",
+            "16"
+          ],
+          "answer": "8"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "تابعی به نام add بساز که دو عدد را جمع کند.",
+          "explanation": "دو پارامتر بگیر و حاصل را return کن.",
+          "starter_code": "function add(a,b){ return a+b; }",
+          "tests": [
+            {
+              "expected_output": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "js-4-2",
+      "title": "پارامتر و مقدار بازگشتی",
+      "intro": "پارامترها جای ورودی‌های تابع‌اند. هنگام فراخوانی تابع، آرگومان‌های واقعی را می‌فرستیم. نتیجه return را می‌توان در متغیر ذخیره کرد.\nمثال: const result = add(2, 3);",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "در add(2,3)، عدد 2 چه نام دارد؟",
+          "explanation": "مقدار ارسالی هنگام فراخوانی آرگومان است.",
+          "options": [
+            "آرگومان",
+            "نام تابع",
+            "نوع تابع"
+          ],
+          "answer": "آرگومان"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "مقدار را از تابع برگردان.",
+          "explanation": "از return استفاده می‌کنیم.",
+          "code": "function one(){ ____ 1; }",
+          "answer": "return"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "تابع با چه چیزی اجرا می‌شود؟",
+          "explanation": "با نوشتن نام تابع و پرانتز فراخوانی می‌شود.",
+          "options": [
+            "فراخوانی",
+            "CSS",
+            "HTML"
+          ],
+          "answer": "فراخوانی"
+        },
+        {
+          "type": "reorder",
+          "prompt": "فراخوانی را مرتب کن.",
+          "explanation": "نتیجه تابع را می‌توان به متغیر نسبت داد.",
+          "lines": [
+            "= add(2,3);",
+            "const total"
+          ],
+          "answer": [
+            "const total",
+            "= add(2,3);"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "تابع رشته را برمی‌گرداند.",
+          "code": "function hi(name){return 'Hi '+name;} console.log(hi('Ali'));",
+          "options": [
+            "Hi Ali",
+            "name",
+            "undefined"
+          ],
+          "answer": "Hi Ali"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "تابعی بساز که ورودی را یک واحد زیاد کند.",
+          "explanation": "تابع باید مقدار n+1 را برگرداند.",
+          "starter_code": "function next(n){return n+1;}",
+          "tests": [
+            {
+              "expected_output": "4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
