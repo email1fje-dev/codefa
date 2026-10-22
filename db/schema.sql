@@ -67,3 +67,7 @@ ON CONFLICT(code) DO NOTHING;
 
 CREATE TABLE IF NOT EXISTS playground_run_events(id BIGSERIAL PRIMARY KEY,user_id BIGINT REFERENCES users(id) ON DELETE SET NULL,language VARCHAR(16) NOT NULL,created_at TIMESTAMPTZ NOT NULL DEFAULT now());
 CREATE INDEX IF NOT EXISTS playground_run_events_created_idx ON playground_run_events(created_at);
+
+ALTER TABLE mistakes ADD COLUMN IF NOT EXISTS id BIGSERIAL;
+ALTER TABLE mistakes ADD COLUMN IF NOT EXISTS resolved_at TIMESTAMPTZ;
+CREATE UNIQUE INDEX IF NOT EXISTS mistakes_id_idx ON mistakes(id);
