@@ -21,14 +21,30 @@
             "1",
             "-1"
           ],
-          "answer": "0"
+          "answer": "0",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "به اولین خانه آرایه دسترسی پیدا کن.",
           "explanation": "از اندیس صفر استفاده کن.",
           "code": "colors[____]",
-          "answer": "0"
+          "answer": "0",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -39,7 +55,15 @@
             "ساخت رنگ CSS",
             "تعریف HTML"
           ],
-          "answer": "نگهداری چند مقدار"
+          "answer": "نگهداری چند مقدار",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -52,7 +76,15 @@
           "answer": [
             "const colors = ['red',",
             "'blue'];"
-          ]
+          ],
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -64,7 +96,15 @@
             "9",
             "0"
           ],
-          "answer": "7"
+          "answer": "7",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -82,7 +122,8 @@
             "mode": "console",
             "show_expected": true,
             "live": false
-          }
+          },
+          "hints": []
         }
       ]
     },
@@ -101,14 +142,30 @@
             "فقط اعداد",
             "فقط رنگ‌ها"
           ],
-          "answer": "کلید و مقدار"
+          "answer": "کلید و مقدار",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "ویژگی name را بخوان.",
           "explanation": "از نقطه و نام ویژگی استفاده کن.",
           "code": "user.____",
-          "answer": "name"
+          "answer": "name",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -119,7 +176,15 @@
             "[1,2]",
             "'text'"
           ],
-          "answer": "{name:'Sara'}"
+          "answer": "{name:'Sara'}",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -134,7 +199,15 @@
             "const user = {",
             "age: 13",
             "};"
-          ]
+          ],
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -146,7 +219,15 @@
             "name",
             "undefined"
           ],
-          "answer": "Ali"
+          "answer": "Ali",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -164,7 +245,8 @@
             "mode": "console",
             "show_expected": true,
             "live": false
-          }
+          },
+          "hints": []
         }
       ]
     },
@@ -183,14 +265,30 @@
             "HTML image",
             "رنگ پس‌زمینه"
           ],
-          "answer": "کار با مجموعه‌ها"
+          "answer": "کار با مجموعه‌ها",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "واژه کلیدی درس را کامل کن.",
           "explanation": "واژه کلیدی در مثال همین درس به کار رفته است.",
           "code": "const key = ____;",
-          "answer": "push"
+          "answer": "push",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -201,7 +299,15 @@
             "فقط فایل CSS",
             "فقط دیتابیس"
           ],
-          "answer": "مرورگر"
+          "answer": "مرورگر",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -214,7 +320,15 @@
           "answer": [
             "const count",
             "= 7;"
-          ]
+          ],
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -226,7 +340,15 @@
             "23",
             "خطا"
           ],
-          "answer": "5"
+          "answer": "5",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -244,7 +366,8 @@
             "mode": "console",
             "show_expected": true,
             "live": false
-          }
+          },
+          "hints": []
         }
       ]
     },
@@ -263,14 +386,30 @@
             "حفظ‌کردن بدون تمرین",
             "نادیده گرفتن خروجی"
           ],
-          "answer": "خواندن و تغییر مثال"
+          "answer": "خواندن و تغییر مثال",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "دستور چاپ خروجی را کامل کن.",
           "explanation": "برای چاپ مقدار در کنسول از console.log استفاده می‌شود.",
           "code": "console.____('سلام');",
-          "answer": "log"
+          "answer": "log",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -281,7 +420,15 @@
             "'42'",
             "'چهارده'"
           ],
-          "answer": "42"
+          "answer": "42",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -294,7 +441,15 @@
           "answer": [
             "console.log",
             "('OK');"
-          ]
+          ],
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -306,7 +461,15 @@
             "console",
             "خطا"
           ],
-          "answer": "CodeFa"
+          "answer": "CodeFa",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -324,7 +487,8 @@
             "mode": "console",
             "show_expected": true,
             "live": false
-          }
+          },
+          "hints": []
         }
       ]
     }
