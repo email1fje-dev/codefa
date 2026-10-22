@@ -59,65 +59,27 @@
     const line=Math.max(0,Number((raw.match(/<anonymous>:(\d+):(\d+)/)||raw.match(/line (\d+)/i)||[])[1]||0)-2);
     return {raw,explanation:errorFa[type]||'کد را از نظر پرانتزها، نام متغیرها و نوع داده‌ها بررسی کن.',line};
   }
-  async function runPython(msg) {
-    const py=await loadPython(msg);
-    output='';
-    const inputs=String(msg.stdin||'').replace(/\r/g,'').split('\n'); let inputIndex=0;
-    py.globals.set('__codefa_input_json',JSON.stringify(inputs));
-    const prelude=`import builtins, json
-__codefa_inputs = json.loads(__codefa_input_json)
-__codefa_input_index = 0
-def __codefa_input(prompt=''):
-    global __codefa_input_index
-    if prompt:
-        print(prompt, end='')
-    if __codefa_input_index >= len(__codefa_inputs) or (__codefa_input_index == len(__codefa_inputs)-1 and __codefa_inputs[-1] == ''):
-        raise EOFError('برای input() در کادر ورودی مقدار بنویس.')
-    value = __codefa_inputs[__codefa_input_index]
-    __codefa_input_index += 1
-    return value
-builtins.input = __codefa_input
-`;
-    if(msg.trace) {
-      const tracePrelude=`import sys
-__codefa_steps=[]
-def __codefa_trace(frame,event,arg):
-    if event=='line' and frame.f_code.co_filename=='<exec>':
-        loc={}
-        for k,v in list(frame.f_locals.items())[:20]:
-            try: val=repr(v)
-            except: val='<unavailable>'
-            loc[str(k)]=str(val)[:80]
-        __codefa_steps.append({'line':frame.f_lineno,'vars':loc})
-        if len(__codefa_steps)>=300:
-            raise RuntimeError('به سقف ۳۰۰ قدم رسیدیم؛ اجرای قدم‌به‌قدم متوقف شد.')
-    return __codefa_trace
-sys.settrace(__codefa_trace)
-try:
-    exec(compile(__codefa_user_code, '<exec>', 'exec'), {'__name__':'__main__'})
-finally:
-    sys.settrace(None)
-`;
-      py.globals.set('__codefa_user_code',String(msg.code||''));
-      try { await py.runPythonAsync(prelude+tracePrelude); const steps=py.globals.get('__codefa_steps'); const jsSteps=steps?steps.toJs({dict_converter:Object.fromEntries}):[]; tell('result',{requestId:msg.requestId,ok:true,output:bounded(output),steps:Array.from(jsSteps).slice(0,300)}); }
-      catch(e){tell('result',{requestId:msg.requestId,ok:false,output:bounded(output),error:pythonError(e)});}
-      return;
-    }
-    try { py.globals.set('__codefa_user_code',String(msg.code||'')); await py.runPythonAsync(prelude+"exec(compile(__codefa_user_code, '<user>', 'exec'), {'__name__':'__main__'})"); tell('result',{requestId:msg.requestId,ok:true,output:bounded(output)}); }
-    catch(e){tell('result',{requestId:msg.requestId,ok:false,output:bounded(output),error:pythonError(e)});}
-  }
-  function runJavaScript(msg) {
-    output='';
-    const logs=[];
-    const fakeConsole={log:(...a)=>logs.push(a.map(String).join(' ')),info:(...a)=>logs.push('[اطلاعات] '+a.map(String).join(' ')),warn:(...a)=>logs.push('[هشدار] '+a.map(String).join(' ')),error:(...a)=>logs.push('[خطا] '+a.map(String).join(' ')),clear:()=>{logs.length=0}};
-    try {
-      const start=performance.now();
-      const fn=new Function('console', '"use strict";\n'+String(msg.code||''));
-      fn(fakeConsole);
-      tell('result',{requestId:msg.requestId,ok:true,output:bounded(logs.join('\\n')||'اجرا شد؛ خروجی‌ای چاپ نشد.'),runtime:Math.round(performance.now()-start)});
-    } catch(e){tell('result',{requestId:msg.requestId,ok:false,output:bounded(logs.join('\\n')),error:jsError(e)});}
-  }
-  function runWeb(msg) {
+  let pythonWorker=null,pythonBusy=false,pythonWorkerUrl=null,pythonTimer=null;
+function runPython(msg){
+ if(pythonBusy){tell('result',{requestId:msg.requestId,ok:false,output:'',error:{raw:'Python در حال اجرای یک برنامه دیگر است.',explanation:'صبر کن تا اجرای فعلی تمام شود.',line:0}});return;}
+ pythonBusy=true;
+ if(!pythonWorker){const blob=new Blob(["import { loadPyodide } from '/vendor/pyodide/pyodide.mjs';\nlet py = null;\nconst errorFa = {SyntaxError:'ساختار دستور درست نیست؛ پرانتز و دونقطه‌ها را بررسی کن.',IndentationError:'تورفتگی خط‌ها درست نیست؛ داخل بلوک‌ها از فاصله‌های یکسان استفاده کن.',NameError:'این نام تعریف نشده است؛ املای متغیر را بررسی کن.',TypeError:'نوع داده برای این عملیات مناسب نیست.',ValueError:'مقدار واردشده برای این تبدیل یا عملیات مناسب نیست.',ZeroDivisionError:'تقسیم بر صفر مجاز نیست.',IndexError:'شماره خانه خارج از محدوده لیست است.',KeyError:'این کلید در دیکشنری وجود ندارد.',AttributeError:'این شیء چنین ویژگی یا متدی ندارد.',ModuleNotFoundError:'این کتابخانه در این پلی‌گراند موجود نیست؛ فقط کتابخانه استاندارد پشتیبانی می‌شود.',RecursionError:'تابع بیش از حد خودش را فراخوانی کرده است.',EOFError:'برای input() در کادر ورودی مقدار بنویس.'};\nfunction pyError(e){const raw=String(e && e.message || e || 'خطای ناشناخته');let type=Object.keys(errorFa).find(k=>raw.includes(k))||'';const m=raw.match(/line ([0-9]+)/i);return {raw,explanation:errorFa[type]||'کد را خط‌به‌خط بررسی کن و نام‌ها و نوع داده‌ها را دوباره ببین.',line:Number(m&&m[1]||0)};}\nfunction bounded(value){let s=String(value||'');if(s.length>102400)s=s.slice(0,102360)+String.fromCharCode(10)+'خروجی خیلی طولانی بود';return s;}\nself.onmessage = async function(event) {\n const m=event.data||{};\n try {\n  if(!py){\n   self.postMessage({type:'progress',requestId:m.requestId,message:'در حال آماده‌سازی Python...'});\n   py=await loadPyodide({indexURL:'/vendor/pyodide/'});\n   try{self.fetch=()=>Promise.reject(new Error('در محیط ایزوله دسترسی شبکه غیرفعال است.'));self.WebSocket=class{constructor(){throw new Error('دسترسی شبکه غیرفعال است.')}};self.EventSource=class{constructor(){throw new Error('دسترسی شبکه غیرفعال است.')}};}catch{}\n  }\n  self.postMessage({type:'progress',requestId:m.requestId,message:'Python آماده است.'});\n  let output='',truncated=false;\n  const addOutput=(value)=>{if(truncated)return;output+=String(value)+String.fromCharCode(10);if(output.length>102400){output=output.slice(0,102350)+String.fromCharCode(10)+'خروجی خیلی طولانی بود';truncated=true;}};\n  py.setStdout({batched:addOutput});\n  py.setStderr({batched:s=>addOutput('[خطا] '+s)});\n  const inputs=String(m.stdin||'').replaceAll(String.fromCharCode(13),'').split(String.fromCharCode(10));\n  py.globals.set('__codefa_input_json',JSON.stringify(inputs));\n  py.globals.set('__codefa_user_code',String(m.code||''));\n  const prelude=[\n   'import builtins, json',\n   '__codefa_inputs = json.loads(__codefa_input_json)',\n   '__codefa_input_index = 0',\n   'def __codefa_input(prompt=\"\"):',\n   '    global __codefa_input_index',\n   '    if prompt: print(prompt, end=\"\")',\n   '    if __codefa_input_index >= len(__codefa_inputs) or (__codefa_input_index == len(__codefa_inputs)-1 and __codefa_inputs[-1] == \"\"):',\n   '        raise EOFError(\"برای input() در کادر ورودی مقدار بنویس.\")',\n   '    value = __codefa_inputs[__codefa_input_index]',\n   '    __codefa_input_index += 1',\n   '    return value',\n   'builtins.input = __codefa_input'\n  ].join(String.fromCharCode(10));\n  let steps=[];\n  try{\n   if(m.trace){\n    const traceCode=[\n     'import sys, builtins',\n     '__codefa_steps = []',\n     '__codefa_output = []',\n     '__codefa_original_print = builtins.print',\n     'def __codefa_print(*args, **kwargs):',\n     '    __codefa_output.append(\" \".join(str(x) for x in args) + chr(10))',\n     '    __codefa_original_print(*args, **kwargs)',\n     'builtins.print = __codefa_print',\n     'def __codefa_trace(frame, event, arg):',\n     '    if event == \"line\" and frame.f_code.co_filename == \"<user>\":',\n     '        loc = {}',\n     '        for k, v in list(frame.f_locals.items())[:20]:',\n     '            try: value = repr(v)',\n     '            except: value = \"<unavailable>\"',\n     '            loc[str(k)] = str(value)[:80]',\n     '        __codefa_steps.append({\"line\":frame.f_lineno,\"vars\":loc,\"output\":\"\".join(__codefa_output)[:100000]})',\n     '        if len(__codefa_steps) >= 300: raise RuntimeError(\"به سقف ۳۰۰ قدم رسیدیم؛ اجرای قدم‌به‌قدم متوقف شد.\")',\n     '    return __codefa_trace',\n     'sys.settrace(__codefa_trace)',\n     'try:',\n     '    exec(compile(__codefa_user_code, \"<user>\", \"exec\"), {\"__name__\":\"__main__\"})',\n     'finally:',\n     '    sys.settrace(None)'\n    ].join(String.fromCharCode(10));\n    try{await py.runPythonAsync(prelude+String.fromCharCode(10)+traceCode)}catch(e){const proxy=py.globals.get('__codefa_steps');if(proxy){try{steps=Array.from(proxy.toJs({dict_converter:Object.fromEntries}));}catch{}}throw e;}\n    const proxy=py.globals.get('__codefa_steps');if(proxy){try{steps=Array.from(proxy.toJs({dict_converter:Object.fromEntries}));}catch{}}\n   } else {\n    await py.runPythonAsync(prelude+String.fromCharCode(10)+\"exec(compile(__codefa_user_code, '<user>', 'exec'), {'__name__':'__main__'})\");\n   }\n   self.postMessage({type:'result',requestId:m.requestId,ok:true,output:bounded(output),steps});\n  } catch(e) {\n   const err=pyError(e);\n   if(!steps.length){try{const proxy=py.globals.get('__codefa_steps');if(proxy)steps=Array.from(proxy.toJs({dict_converter:Object.fromEntries}));}catch{}}\n   self.postMessage({type:'result',requestId:m.requestId,ok:false,output:bounded(output),error:err,steps});\n  }\n};"],{type:'text/javascript'});pythonWorkerUrl=URL.createObjectURL(blob);pythonWorker=new Worker(pythonWorkerUrl,{type:'module'});}
+ const worker=pythonWorker;const timeout=Math.max(1,Math.min(15,Number(msg.timeoutSeconds)||8));
+ const stopForTimeout=()=>{try{worker.terminate()}catch{}if(pythonWorker===worker){pythonWorker=null;pythonBusy=false;if(pythonWorkerUrl)URL.revokeObjectURL(pythonWorkerUrl);pythonWorkerUrl=null;}tell('result',{requestId:msg.requestId,ok:false,output:'',error:{raw:'TimeoutError',explanation:'برنامه بیش از حد طول کشید (احتمالاً حلقه‌ی بی‌نهایت).',line:0}});};
+ clearTimeout(pythonTimer);pythonTimer=setTimeout(stopForTimeout,60000);
+ worker.onmessage=e=>{const d=e.data||{};if(d.type==='progress'){clearTimeout(pythonTimer);pythonTimer=setTimeout(stopForTimeout,d.message&&d.message.includes('آماده‌سازی')?60000:timeout*1000);tell('progress',{requestId:msg.requestId,message:d.message||'در حال آماده‌سازی Python...'});return;}if(d.type==='result'){clearTimeout(pythonTimer);pythonBusy=false;tell('result',d);}};
+ worker.onerror=e=>{clearTimeout(pythonTimer);pythonBusy=false;try{worker.terminate()}catch{}pythonWorker=null;if(pythonWorkerUrl)URL.revokeObjectURL(pythonWorkerUrl);pythonWorkerUrl=null;tell('result',{requestId:msg.requestId,ok:false,output:'',error:{raw:String(e.message||'Worker error'),explanation:'محیط Python با خطا روبه‌رو شد؛ دوباره تلاش کن.',line:0}});};
+ worker.postMessage({...msg,timeoutSeconds:timeout});
+}
+function runJavaScript(msg){
+ const timeout=Math.max(1,Math.min(15,Number(msg.timeoutSeconds)||3));
+ const blob=new Blob(["self.onmessage=function(event){\n const m=event.data||{},logs=[];\n const errorFa={ReferenceError:'نام متغیر یا تابع پیدا نشد.',TypeError:'این عملیات روی این نوع داده ممکن نیست.',SyntaxError:'ساختار کد جاوااسکریپت درست نیست.',RangeError:'مقدار خارج از محدوده مجاز است.'};\n const bounded=s=>{s=String(s||'');return s.length>102400?s.slice(0,102350)+String.fromCharCode(10)+'خروجی خیلی طولانی بود':s};\n const fakeConsole={log:(...a)=>logs.push(a.map(String).join(' ')),info:(...a)=>logs.push('[اطلاعات] '+a.map(String).join(' ')),warn:(...a)=>logs.push('[هشدار] '+a.map(String).join(' ')),error:(...a)=>logs.push('[خطا] '+a.map(String).join(' ')),clear:()=>{logs.length=0}};\n try{\n  self.fetch=()=>Promise.reject(new Error('در محیط ایزوله دسترسی شبکه غیرفعال است.'));\n  self.WebSocket=class{constructor(){throw new Error('دسترسی شبکه غیرفعال است.')}};\n  const start=Date.now();new Function('console','\"use strict\";'+String.fromCharCode(10)+String(m.code||''))(fakeConsole);\n  self.postMessage({type:'result',requestId:m.requestId,ok:true,output:bounded(logs.join(String.fromCharCode(10))||'اجرا شد؛ خروجی‌ای چاپ نشد.'),runtime:Date.now()-start});\n }catch(e){const raw=String(e&&e.stack||e&&e.message||e),type=String(e&&e.name||'Error'),lineMatch=raw.match(/<anonymous>:([0-9]+):([0-9]+)/);self.postMessage({type:'result',requestId:m.requestId,ok:false,output:bounded(logs.join(String.fromCharCode(10))),error:{raw,explanation:errorFa[type]||'کد را از نظر پرانتزها، نام متغیرها و نوع داده‌ها بررسی کن.',line:Math.max(0,Number(lineMatch&&lineMatch[1]||0)-2)}});}\n};"],{type:'text/javascript'});const url=URL.createObjectURL(blob);const worker=new Worker(url);
+ let finished=false;const timer=setTimeout(()=>{if(finished)return;finished=true;worker.terminate();URL.revokeObjectURL(url);tell('result',{requestId:msg.requestId,ok:false,output:'',error:{raw:'TimeoutError',explanation:'برنامه بیش از حد طول کشید (احتمالاً حلقه‌ی بی‌نهایت).',line:0}});},timeout*1000);
+ worker.onmessage=e=>{if(finished)return;finished=true;clearTimeout(timer);worker.terminate();URL.revokeObjectURL(url);tell('result',e.data||{requestId:msg.requestId,ok:false,output:'',error:{raw:'خطای اجرا',explanation:'کد را بررسی کن.',line:0}});};
+ worker.onerror=e=>{if(finished)return;finished=true;clearTimeout(timer);worker.terminate();URL.revokeObjectURL(url);tell('result',{requestId:msg.requestId,ok:false,output:'',error:{raw:String(e.message||'Worker error'),explanation:'اجرای کد جاوااسکریپت ناموفق بود.',line:0}});};
+ worker.postMessage({...msg,code:String(msg.code||''),timeoutSeconds:timeout});
+}
+function runWeb(msg) {
     try {
       const files=msg.files||{};
       previewEl.innerHTML='';
