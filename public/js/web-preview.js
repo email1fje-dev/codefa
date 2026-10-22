@@ -1,0 +1,1 @@
+window.CodeFaWebPreview={run:(frame,files)=>window.CodeFaSandbox.send(frame,{language:'web',files}),debounce(fn,delay=500){let timer;return(...args)=>{clearTimeout(timer);timer=setTimeout(()=>fn(...args),delay)}}};
