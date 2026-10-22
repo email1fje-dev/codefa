@@ -1,0 +1,160 @@
+{
+  "course": "html-css",
+  "unit": {
+    "id": "unit4",
+    "title": "CSS مقدماتی",
+    "description": "رنگ، فونت و فاصله را کنترل کن."
+  },
+  "lessons": [
+    {
+      "id": "html-4-1",
+      "title": "انتخابگر و رنگ",
+      "intro": "CSS ظاهر صفحه را تغییر می‌دهد. قانون CSS از انتخابگر و مجموعه‌ای از ویژگی‌ها تشکیل می‌شود. برای رنگ متن از color و برای رنگ پس‌زمینه از background-color استفاده می‌کنیم.\nمثال: p { color: green; }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "CSS برای چه چیزی است؟",
+          "explanation": "CSS ظاهر و چیدمان صفحه را تعیین می‌کند.",
+          "options": [
+            "ظاهر صفحه",
+            "ذخیره رمز",
+            "ساخت دیتابیس"
+          ],
+          "answer": "ظاهر صفحه"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "ویژگی رنگ متن را کامل کن.",
+          "explanation": "color رنگ متن را تنظیم می‌کند.",
+          "code": "p { ____: red; }",
+          "answer": "color"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام انتخابگر همه پاراگراف‌ها را انتخاب می‌کند؟",
+          "explanation": "نام تگ p انتخابگر تگ است.",
+          "options": [
+            "p",
+            "#p",
+            ".p()"
+          ],
+          "answer": "p"
+        },
+        {
+          "type": "reorder",
+          "prompt": "قانون CSS را مرتب کن.",
+          "explanation": "انتخابگر و سپس آکولادها و ویژگی می‌آیند.",
+          "lines": [
+            "color: red;",
+            "p {",
+            "}"
+          ],
+          "answer": [
+            "p {",
+            "color: red;",
+            "}"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "background-color چه چیزی را تغییر می‌دهد؟",
+          "explanation": "این ویژگی رنگ پس‌زمینه را تعیین می‌کند.",
+          "code": "body { background-color: black; }",
+          "options": [
+            "پس‌زمینه",
+            "اندازه متن",
+            "نشانی لینک"
+          ],
+          "answer": "پس‌زمینه"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "رنگ متن h1 را سبز کن.",
+          "explanation": "انتخابگر h1 و ویژگی color را بنویس.",
+          "starter_code": "h1 { color: green; }",
+          "tests": [
+            {
+              "expected_output": "h1 { color: green; }"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-4-2",
+      "title": "فونت و فاصله",
+      "intro": "font-size اندازه نوشته را مشخص می‌کند. margin فاصله بیرونی عنصر و padding فاصله بین محتوا و لبه داخلی است. این سه ویژگی از پایه‌های طراحی صفحه‌اند.\nمثال: .card { padding: 16px; margin: 8px; font-size: 18px; }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "اندازه متن با کدام ویژگی تنظیم می‌شود؟",
+          "explanation": "font-size اندازه قلم است.",
+          "options": [
+            "font-size",
+            "margin",
+            "border"
+          ],
+          "answer": "font-size"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "فاصله داخلی را کامل کن.",
+          "explanation": "padding فضای داخل مرز عنصر است.",
+          "code": ".box { ____: 12px; }",
+          "answer": "padding"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "margin به چه معناست؟",
+          "explanation": "margin فاصله بیرونی است.",
+          "options": [
+            "فاصله بیرونی",
+            "رنگ متن",
+            "نوع فونت"
+          ],
+          "answer": "فاصله بیرونی"
+        },
+        {
+          "type": "reorder",
+          "prompt": "قانون را مرتب کن.",
+          "explanation": "ویژگی‌ها داخل آکولاد می‌آیند.",
+          "lines": [
+            "padding: 10px;",
+            ".card {",
+            "}"
+          ],
+          "answer": [
+            ".card {",
+            "padding: 10px;",
+            "}"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "padding کجا فاصله ایجاد می‌کند؟",
+          "explanation": "padding بین محتوا و مرز داخلی است.",
+          "code": ".box { padding: 20px; }",
+          "options": [
+            "داخل عنصر",
+            "بیرون عنصر",
+            "در آدرس صفحه"
+          ],
+          "answer": "داخل عنصر"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "اندازه متن p را 16px کن.",
+          "explanation": "از font-size استفاده کن.",
+          "starter_code": "p { font-size: 16px; }",
+          "tests": [
+            {
+              "expected_output": "p { font-size: 16px; }"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
