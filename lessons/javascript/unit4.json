@@ -72,7 +72,7 @@
           "type": "code_exercise",
           "prompt": "تابعی به نام add بساز که دو عدد را جمع کند.",
           "explanation": "دو پارامتر بگیر و حاصل را return کن.",
-          "starter_code": "function add(a,b){ return a+b; }",
+          "starter_code": "function add(a,b){ return a+b; }\nconsole.log(add(2,3));",
           "tests": [
             {
               "expected_output": "5"
@@ -145,7 +145,7 @@
           "type": "code_exercise",
           "prompt": "تابعی بساز که ورودی را یک واحد زیاد کند.",
           "explanation": "تابع باید مقدار n+1 را برگرداند.",
-          "starter_code": "function next(n){return n+1;}",
+          "starter_code": "function next(n){return n+1;}\nconsole.log(next(3));",
           "tests": [
             {
               "expected_output": "4"
