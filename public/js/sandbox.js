@@ -114,8 +114,8 @@ finally:
       const start=performance.now();
       const fn=new Function('console', '"use strict";\n'+String(msg.code||''));
       fn(fakeConsole);
-      tell('result',{ok:true,output:bounded(logs.join('\n')||'اجرا شد؛ خروجی‌ای چاپ نشد.'),runtime:Math.round(performance.now()-start)});
-    } catch(e){tell('result',{ok:false,output:bounded(logs.join('\n')),error:jsError(e)});}
+      tell('result',{requestId:msg.requestId,ok:true,output:bounded(logs.join('\\n')||'اجرا شد؛ خروجی‌ای چاپ نشد.'),runtime:Math.round(performance.now()-start)});
+    } catch(e){tell('result',{requestId:msg.requestId,ok:false,output:bounded(logs.join('\\n')),error:jsError(e)});}
   }
   function runWeb(msg) {
     try {
@@ -126,7 +126,7 @@ finally:
       const logs=[];const fakeConsole={log:(...a)=>logs.push(a.map(String).join(' ')),info:(...a)=>logs.push('[اطلاعات] '+a.map(String).join(' ')),warn:(...a)=>logs.push('[هشدار] '+a.map(String).join(' ')),error:(...a)=>logs.push('[خطا] '+a.map(String).join(' '))};
       const start=performance.now();
       if(String(files.js||'').trim())new Function('console','root','"use strict";\n'+String(files.js))(fakeConsole,frame);
-      tell('result',{ok:true,output:bounded(logs.join('\n')||'پیش‌نمایش وب به‌روزرسانی شد.'),runtime:Math.round(performance.now()-start),preview:true});
+      const checkResults=(msg.checks||[]).slice(0,50).map(check=>{try{const nodes=Array.from(frame.querySelectorAll(String(check.selector||'*')));let pass=check.exists===false?nodes.length===0:nodes.length>=(Number(check.count_min)||(check.exists===true?1:0));if(check.text_contains!=null)pass=pass&&nodes.some(n=>n.textContent.includes(String(check.text_contains)));if(check.attribute&&nodes[0])pass=pass&&nodes[0].getAttribute(String(check.attribute.name))===String(check.attribute.value);if(check.style&&nodes[0])for(const [prop,val] of Object.entries(check.style))pass=pass&&getComputedStyle(nodes[0]).getPropertyValue(prop).trim()===String(val);return {selector:String(check.selector||''),pass};}catch{return {selector:String(check.selector||''),pass:false}}}); tell('result',{requestId:msg.requestId,ok:true,output:bounded(logs.join('\\n')||'پیش‌نمایش وب به‌روزرسانی شد.'),runtime:Math.round(performance.now()-start),preview:true,checks:checkResults});
     } catch(e){tell('result',{requestId:msg.requestId,ok:false,output:'',error:jsError(e)});}
   }
   window.addEventListener('message', async event=>{
