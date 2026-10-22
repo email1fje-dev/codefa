@@ -26,7 +26,17 @@ const app = express();
 app.set('trust proxy', 1);
 app.disable('x-powered-by');
 app.use(helmet({ contentSecurityPolicy: false }));
-app.use((req,res,next)=>{const sandbox=req.path==='/sandbox';if(sandbox){const host=String(req.get('host')||'').replace(/[^a-zA-Z0-9.:[\\]-]/g,'');res.setHeader('Content-Security-Policy',"default-src 'none'; script-src 'self' https://\"+host+\" http://\"+host+\" 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' https://\"+host+\" http://\"+host+\" 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://"+host+" http://"+host+"; worker-src 'self' blob:; font-src 'self' data:; frame-ancestors 'self'; base-uri 'none'; form-action 'none'");}else{res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'");}next();});
+app.use((req,res,next)=>{
+ const sandbox=req.path==='/sandbox';
+ if(sandbox){
+  const host=String(req.get('host')||'').replace(/[^a-zA-Z0-9.:-]/g,'');
+  const policy="default-src 'none'; script-src 'self' https://"+host+" http://"+host+" 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' https://"+host+" http://"+host+" 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://"+host+" http://"+host+"; worker-src 'self' blob:; font-src 'self' data:; frame-ancestors 'self'; base-uri 'none'; form-action 'none'";
+  res.setHeader('Content-Security-Policy',policy);
+ } else {
+  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'");
+ }
+ next();
+});
 app.use(compression());
 app.use(express.json({ limit: '200kb' }));
 app.use(cookieParser());
