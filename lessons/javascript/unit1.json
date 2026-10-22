@@ -1,0 +1,158 @@
+{
+  "course": "javascript",
+  "unit": {
+    "id": "unit1",
+    "title": "متغیر و نوع داده",
+    "description": "اطلاعات را در متغیرها نگه دار."
+  },
+  "lessons": [
+    {
+      "id": "js-1-1",
+      "title": "متغیرها با let و const",
+      "intro": "متغیر نامی برای نگهداری داده است. let برای مقداری که ممکن است تغییر کند و const برای ارجاعی که دوباره مقداردهی نمی‌شود مناسب است.\nمثال:\nconst name = 'Parsa';\nlet score = 0;",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "برای متغیری که دوباره مقداردهی نمی‌شود کدام مناسب است؟",
+          "explanation": "const اجازه انتساب دوباره به همان متغیر را نمی‌دهد.",
+          "options": [
+            "const",
+            "again",
+            "repeat"
+          ],
+          "answer": "const"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "متغیر امتیاز را با let تعریف کن.",
+          "explanation": "تعریف متغیر با let آغاز می‌شود.",
+          "code": "____ score = 10;",
+          "answer": "let"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام یک مقدار متنی است؟",
+          "explanation": "رشته متن داخل کوتیشن قرار می‌گیرد.",
+          "options": [
+            "'سلام'",
+            "42",
+            "true"
+          ],
+          "answer": "'سلام'"
+        },
+        {
+          "type": "reorder",
+          "prompt": "تعریف متغیر را مرتب کن.",
+          "explanation": "ابتدا let، سپس نام و مقدار می‌آید.",
+          "lines": [
+            "= 5;",
+            "let level",
+            ""
+          ],
+          "answer": [
+            "let level",
+            "= 5;",
+            ""
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "console.log مقدار متغیر را چاپ می‌کند.",
+          "code": "let n = 4; console.log(n);",
+          "options": [
+            "4",
+            "n",
+            "خطا"
+          ],
+          "answer": "4"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک متغیر const با نام city و مقدار 'Tehran' بساز.",
+          "explanation": "از const و رشته داخل کوتیشن استفاده کن.",
+          "starter_code": "const city = 'Tehran';",
+          "tests": [
+            {
+              "expected_output": "Tehran"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "js-1-2",
+      "title": "عدد، رشته و بولین",
+      "intro": "نوع داده مشخص می‌کند چه مقداری داریم. number برای عدد، string برای متن و boolean برای true یا false است.\nمثال:\nconst age = 13;\nconst isReady = true;",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "نوع true چیست؟",
+          "explanation": "true و false از نوع boolean هستند.",
+          "options": [
+            "boolean",
+            "string",
+            "number"
+          ],
+          "answer": "boolean"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "مقدار بولین درست را بنویس.",
+          "explanation": "مقدار درست در جاوااسکریپت true است.",
+          "code": "const ready = ____;",
+          "answer": "true"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام مقدار عددی است؟",
+          "explanation": "عدد بدون کوتیشن از نوع number است.",
+          "options": [
+            "25",
+            "'25'",
+            "'بیست و پنج'"
+          ],
+          "answer": "25"
+        },
+        {
+          "type": "reorder",
+          "prompt": "عبارت را مرتب کن.",
+          "explanation": "const سپس نام و مقدار می‌آید.",
+          "lines": [
+            "= 'سلام';",
+            "const message"
+          ],
+          "answer": [
+            "const message",
+            "= 'سلام';"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "چه چیزی چاپ می‌شود؟",
+          "explanation": "عملگر + دو رشته را به هم می‌چسباند.",
+          "code": "console.log('کو' + 'د');",
+          "options": [
+            "کود",
+            "کو + د",
+            "خطا"
+          ],
+          "answer": "کود"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک متغیر age با مقدار 13 تعریف کن.",
+          "explanation": "از let یا const استفاده کن.",
+          "starter_code": "const age = 13;",
+          "tests": [
+            {
+              "expected_output": "13"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
