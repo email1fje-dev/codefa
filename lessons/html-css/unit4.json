@@ -155,6 +155,156 @@
           ]
         }
       ]
+    },
+    {
+      "id": "html-css-unit4-3",
+      "title": "مدل جعبه‌ای",
+      "intro": "هر عنصر در مدل جعبه‌ای از محتوا، padding، border و margin تشکیل می‌شود. width معمولاً عرض محتواست؛ box-sizing:border-box باعث می‌شود padding و border در عرض اعلام‌شده حساب شوند.\nمثال:\n* { box-sizing: border-box; }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام مورد درباره مدل جعبه‌ای درست است؟",
+          "explanation": "این مفهوم بخشی از ساختار استاندارد HTML و CSS است.",
+          "options": [
+            "box-sizing",
+            "database",
+            "password_hash"
+          ],
+          "answer": "box-sizing"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "کلمهٔ کلیدی مثال را کامل کن.",
+          "explanation": "این واژه در مثال آموزشی استفاده شده است.",
+          "code": "<____>محتوا</box-sizing>",
+          "answer": "box-sizing"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "مثال آموزشی به کدام حوزه مربوط است؟",
+          "explanation": "مثال درباره ساختار و نمایش صفحه وب است.",
+          "options": [
+            "HTML و CSS",
+            "SQL فقط",
+            "شبکه"
+          ],
+          "answer": "HTML و CSS"
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط نمونه را مرتب کن.",
+          "explanation": "ابتدا عنصر آغازین، سپس محتوا و در پایان تگ بسته قرار می‌گیرد.",
+          "lines": [
+            "</p>",
+            "<p>سلام",
+            ""
+          ],
+          "answer": [
+            "<p>سلام",
+            "",
+            "</p>"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "محتوای قابل‌مشاهده در این نمونه چیست؟",
+          "explanation": "متن بین تگ‌ها در صفحه نمایش داده می‌شود.",
+          "code": "<p>سلام وب</p>",
+          "options": [
+            "سلام وب",
+            "p",
+            "هیچ‌چیز"
+          ],
+          "answer": "سلام وب"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک پاراگراف با متن «تمرین» بنویس.",
+          "explanation": "از تگ p برای پاراگراف استفاده کن.",
+          "starter_code": "<p>تمرین</p>",
+          "tests": [
+            {
+              "expected_output": "<p>تمرین</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-css-unit4-4",
+      "title": "تمرین کاربردی: مدل جعبه‌ای",
+      "intro": "در این درس، مفهوم مدل جعبه‌ای را در یک مثال کوچک به کار می‌بریم. بهتر است کد را بخش‌به‌بخش بخوانی و بعد خودت تغییرش بدهی.\nمثال:\n* { box-sizing: border-box; }",
+      "xp_reward": 20,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "چرا مثال این درس مفید است؟",
+          "explanation": "مثال کوتاه کمک می‌کند مفهوم را با کد واقعی مرتبط کنی.",
+          "options": [
+            "تمرین مفهوم در نمونه واقعی",
+            "حذف همه تگ‌ها",
+            "اجرای کد روی سرور"
+          ],
+          "answer": "تمرین مفهوم در نمونه واقعی"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "نام ویژگی یا تگ اصلی این درس را بنویس.",
+          "explanation": "نام اصلی در مثال همین درس دیده می‌شود.",
+          "code": "نام مفهوم: ____",
+          "answer": "box-sizing"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "قبل از انتشار صفحه چه کاری بهتر است؟",
+          "explanation": "بررسی نتیجه و دسترس‌پذیری بخشی از روند درست توسعه است.",
+          "options": [
+            "بررسی نتیجه",
+            "نادیده گرفتن خطا",
+            "حذف عنوان"
+          ],
+          "answer": "بررسی نتیجه"
+        },
+        {
+          "type": "reorder",
+          "prompt": "کد HTML ساده را مرتب کن.",
+          "explanation": "تگ باز پیش از محتوا و تگ بسته بعد از آن قرار می‌گیرد.",
+          "lines": [
+            "</h1>",
+            "<h1>عنوان",
+            ""
+          ],
+          "answer": [
+            "<h1>عنوان",
+            "",
+            "</h1>"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "متن داخل تگ چه چیزی است؟",
+          "explanation": "مرورگر متن داخل تگ را نمایش می‌دهد.",
+          "code": "<h1>کدفا</h1>",
+          "options": [
+            "کدفا",
+            "h1",
+            "کد اجرا نمی‌شود"
+          ],
+          "answer": "کدفا"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک عنوان h1 با متن «کدفا» بنویس.",
+          "explanation": "از h1 برای عنوان سطح اول استفاده کن.",
+          "starter_code": "<h1>کدفا</h1>",
+          "tests": [
+            {
+              "expected_output": "<h1>کدفا</h1>"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
