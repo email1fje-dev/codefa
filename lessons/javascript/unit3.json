@@ -21,14 +21,30 @@
             "if",
             "const"
           ],
-          "answer": "for"
+          "answer": "for",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "حلقه را تا وقتی i کمتر از 5 است ادامه بده.",
           "explanation": "شرط حلقه در بخش میانی است.",
           "code": "for (let i=0; i ____ 5; i++) {}",
-          "answer": "<"
+          "answer": "<",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -39,7 +55,15 @@
             "حذف متغیر",
             "چاپ مقدار"
           ],
-          "answer": "افزایش یک‌واحدی"
+          "answer": "افزایش یک‌واحدی",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -54,7 +78,15 @@
             "for (let i=0; i<2; i++) {",
             "console.log(i);",
             "}"
-          ]
+          ],
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -66,7 +98,15 @@
             "۳ بار",
             "۴ بار"
           ],
-          "answer": "۳ بار"
+          "answer": "۳ بار",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -84,7 +124,8 @@
             "mode": "console",
             "show_expected": true,
             "live": false
-          }
+          },
+          "hints": []
         }
       ]
     },
@@ -103,14 +144,30 @@
             "فقط یک بار",
             "هیچ‌وقت"
           ],
-          "answer": "تا وقتی شرط درست است"
+          "answer": "تا وقتی شرط درست است",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "کلمه حلقه را کامل کن.",
           "explanation": "ساختار while شرط می‌گیرد.",
           "code": "____ (count > 0) { count--; }",
-          "answer": "while"
+          "answer": "while",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -121,7 +178,15 @@
             "برای تغییر رنگ",
             "برای ساخت تابع"
           ],
-          "answer": "برای پایان حلقه"
+          "answer": "برای پایان حلقه",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -136,7 +201,15 @@
             "while (count > 0) {",
             "count--;",
             "}"
-          ]
+          ],
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -148,7 +221,15 @@
             "1",
             "2"
           ],
-          "answer": "0"
+          "answer": "0",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -166,7 +247,8 @@
             "mode": "console",
             "show_expected": true,
             "live": false
-          }
+          },
+          "hints": []
         }
       ]
     },
@@ -185,14 +267,30 @@
             "HTML image",
             "رنگ پس‌زمینه"
           ],
-          "answer": "کنترل حلقه"
+          "answer": "کنترل حلقه",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "واژه کلیدی درس را کامل کن.",
           "explanation": "واژه کلیدی در مثال همین درس به کار رفته است.",
           "code": "const key = ____;",
-          "answer": "continue"
+          "answer": "continue",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -203,7 +301,15 @@
             "فقط فایل CSS",
             "فقط دیتابیس"
           ],
-          "answer": "مرورگر"
+          "answer": "مرورگر",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -216,7 +322,15 @@
           "answer": [
             "const count",
             "= 7;"
-          ]
+          ],
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -228,7 +342,15 @@
             "23",
             "خطا"
           ],
-          "answer": "5"
+          "answer": "5",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -246,7 +368,8 @@
             "mode": "console",
             "show_expected": true,
             "live": false
-          }
+          },
+          "hints": []
         }
       ]
     },
@@ -265,14 +388,30 @@
             "حفظ‌کردن بدون تمرین",
             "نادیده گرفتن خروجی"
           ],
-          "answer": "خواندن و تغییر مثال"
+          "answer": "خواندن و تغییر مثال",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "دستور چاپ خروجی را کامل کن.",
           "explanation": "برای چاپ مقدار در کنسول از console.log استفاده می‌شود.",
           "code": "console.____('سلام');",
-          "answer": "log"
+          "answer": "log",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -283,7 +422,15 @@
             "'42'",
             "'چهارده'"
           ],
-          "answer": "42"
+          "answer": "42",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -296,7 +443,15 @@
           "answer": [
             "console.log",
             "('OK');"
-          ]
+          ],
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -308,7 +463,15 @@
             "console",
             "خطا"
           ],
-          "answer": "CodeFa"
+          "answer": "CodeFa",
+          "language": "javascript",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -326,7 +489,8 @@
             "mode": "console",
             "show_expected": true,
             "live": false
-          }
+          },
+          "hints": []
         }
       ]
     }
