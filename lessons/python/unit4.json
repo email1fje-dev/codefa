@@ -1,0 +1,570 @@
+{
+  "course": "python",
+  "unit": {
+    "id": "unit4",
+    "title": "حلقه‌ها؛ for و while",
+    "description": "تکرار کارها با for و while و شناخت range."
+  },
+  "lessons": [
+    {
+      "id": "python-unit4-lesson1",
+      "title": "تکرار با for",
+      "intro": "حلقه for روی اعضای یک مجموعه حرکت می‌کند و هر بار بلوک تو رفته را اجرا می‌کند.\n\nمثال:\n```python\nfor city in ['قم', 'رشت']:\n    print(city)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "حلقه for روی اعضای یک مجموعه حرکت می‌کند و هر بار بلوک تو رفته را اجرا می‌کند.",
+          "options": [
+            "تکرار با for",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "تکرار با for",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "for city in ['قم', 'رشت']:\n    print(city)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "for city in ['قم', 'رشت']:",
+          "answer": "for",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "for city in ['قم', 'رشت']:",
+            "    print(city)"
+          ],
+          "answer": [
+            "for city in ['قم', 'رشت']:",
+            "    print(city)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "for city in ['قم', 'رشت']:\n    print(city)",
+          "options": [
+            "قم\nرشت",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "قم\nرشت",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «قم» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"قم\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "قم"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "for city in ['قم', 'رشت']:\n    print(city)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "قم\nرشت"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit4-lesson2",
+      "title": "تابع range",
+      "intro": "range(3) عددهای ۰، ۱ و ۲ را تولید می‌کند و عدد پایانی را شامل نمی‌شود.\n\nمثال:\n```python\nfor i in range(3):\n    print(i)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "range(3) عددهای ۰، ۱ و ۲ را تولید می‌کند و عدد پایانی را شامل نمی‌شود.",
+          "options": [
+            "تابع range",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "تابع range",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "for i in range(3):\n    print(i)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "for i in range(3):",
+          "answer": "range",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "for i in range(3):",
+            "    print(i)"
+          ],
+          "answer": [
+            "for i in range(3):",
+            "    print(i)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "for i in range(3):\n    print(i)",
+          "options": [
+            "0\n1\n2",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "0\n1\n2",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «2» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"2\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "2"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "for i in range(3):\n    print(i)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "0\n1\n2"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit4-lesson3",
+      "title": "حلقه while",
+      "intro": "تا وقتی شرط while درست است، بدنه تکرار می‌شود؛ شرط باید در نهایت تغییر کند.\n\nمثال:\n```python\nn = 1\nwhile n <= 3:\n    print(n)\n    n += 1\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "تا وقتی شرط while درست است، بدنه تکرار می‌شود؛ شرط باید در نهایت تغییر کند.",
+          "options": [
+            "حلقه while",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "حلقه while",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "n = 1\nwhile n <= 3:\n    print(n)\n    n += 1"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = 1",
+          "answer": "while",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "n = 1",
+            "while n <= 3:",
+            "    print(n)",
+            "    n += 1"
+          ],
+          "answer": [
+            "n = 1",
+            "while n <= 3:",
+            "    print(n)",
+            "    n += 1"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "n = 1\nwhile n <= 3:\n    print(n)\n    n += 1",
+          "options": [
+            "1\n2\n3",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "1\n2\n3",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «3» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"3\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "3"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "n = 1\nwhile n <= 3:\n    print(n)\n    n += 1",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "1\n2\n3"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit4-lesson4",
+      "title": "جمع عددها",
+      "intro": "متغیر جمع‌کننده می‌تواند نتیجه هر دور را نگه دارد.\n\nمثال:\n```python\ntotal = 0\nfor price in [1000, 2000]:\n    total += price\nprint(total)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "متغیر جمع‌کننده می‌تواند نتیجه هر دور را نگه دارد.",
+          "options": [
+            "جمع عددها",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "جمع عددها",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "total = 0\nfor price in [1000, 2000]:\n    total += price\nprint(total)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = 0",
+          "answer": "total",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "total = 0",
+            "for price in [1000, 2000]:",
+            "    total += price",
+            "print(total)"
+          ],
+          "answer": [
+            "total = 0",
+            "for price in [1000, 2000]:",
+            "    total += price",
+            "print(total)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "total = 0\nfor price in [1000, 2000]:\n    total += price\nprint(total)",
+          "options": [
+            "3000",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "3000",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «3000» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"3000\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "3000"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "total = 0\nfor price in [1000, 2000]:\n    total += price\nprint(total)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "3000"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    }
+  ]
+}
