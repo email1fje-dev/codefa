@@ -12,3 +12,5 @@ body[data-theme="light"] input,body[data-theme="light"] textarea,body[data-theme
 .trace-output{direction:ltr;text-align:left;white-space:pre-wrap;background:#101a14;color:#e8f5eb;border-radius:8px;padding:10px;min-height:24px}.pg-current-line{display:block;background:#315b3c;color:#fff;border-inline-start:4px solid #35b86b;padding-inline-start:6px}
 
 .notifications-panel{position:relative;margin:12px 0}.notification-item{padding:12px 0;border-bottom:1px solid var(--line)}.notification-item p{margin:6px 0}.notification-item.unread{border-inline-start:4px solid #35b86b;padding-inline-start:10px}.notification-item.read{opacity:.72}
+
+.CodeMirror-linebackground.pg-current-line-bg{background:#315b3c!important}
