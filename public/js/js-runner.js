@@ -1,0 +1,1 @@
+window.CodeFaJSRunner={language:'javascript',timeoutSeconds:3,run:(frame,payload)=>window.CodeFaSandbox.send(frame,{...payload,language:'javascript'}),errorHints:{ReferenceError:'نام متغیر یا تابع پیدا نشد.',TypeError:'این عملیات روی این نوع داده ممکن نیست.',SyntaxError:'ساختار کد جاوااسکریپت درست نیست.',RangeError:'مقدار خارج از محدوده مجاز است.'}};
