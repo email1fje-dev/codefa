@@ -46,9 +46,9 @@
           "prompt": "اجزای حلقه را مرتب کن.",
           "explanation": "ساختار for با پرانتز و بدنه نوشته می‌شود.",
           "lines": [
+            "}",
             "console.log(i);",
-            "for (let i=0; i<2; i++) {",
-            "}"
+            "for (let i=0; i<2; i++) {"
           ],
           "answer": [
             "for (let i=0; i<2; i++) {",
@@ -121,9 +121,9 @@
           "prompt": "حلقه را مرتب کن.",
           "explanation": "شرط در while و سپس بدنه است.",
           "lines": [
+            "}",
             "count--;",
-            "while (count > 0) {",
-            "}"
+            "while (count > 0) {"
           ],
           "answer": [
             "while (count > 0) {",
