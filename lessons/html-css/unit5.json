@@ -21,14 +21,30 @@
             "position: flex",
             "flex: display"
           ],
-          "answer": "display: flex"
+          "answer": "display: flex",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "چیدمان فلکس را فعال کن.",
           "explanation": "display ویژگی نمایش است.",
           "code": ".row { display: ____; }",
-          "answer": "flex"
+          "answer": "flex",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -39,7 +55,15 @@
             "رنگ متن",
             "اندازه تصویر"
           ],
-          "answer": "فاصله بین آیتم‌ها"
+          "answer": "فاصله بین آیتم‌ها",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -54,7 +78,15 @@
             ".row {",
             "display: flex;",
             "}"
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -66,7 +98,15 @@
             "ثبت‌نام کاربر",
             "تغییر آدرس"
           ],
-          "answer": "چیدمان عناصر"
+          "answer": "چیدمان عناصر",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -77,7 +117,15 @@
             {
               "expected_output": ".row { display: flex; }"
             }
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "web_exercise",
@@ -132,14 +180,30 @@
             "font-weight",
             "href"
           ],
-          "answer": "align-items"
+          "answer": "align-items",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "مقدار فاصله‌گذاری بین دو طرف را کامل کن.",
           "explanation": "space-between فاصله بین آیتم‌ها را توزیع می‌کند.",
           "code": ".row { justify-content: ____; }",
-          "answer": "space-between"
+          "answer": "space-between",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -150,7 +214,15 @@
             "چپ‌چین همیشه",
             "مخفی"
           ],
-          "answer": "مرکز"
+          "answer": "مرکز",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -167,7 +239,15 @@
             "display: flex;",
             "align-items: center;",
             "}"
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -179,7 +259,15 @@
             "حذف عنصر",
             "تغییر رنگ"
           ],
-          "answer": "وسط‌چین محور اصلی"
+          "answer": "وسط‌چین محور اصلی",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -190,7 +278,15 @@
             {
               "expected_output": ".row { display: flex; justify-content: center; }"
             }
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     },
@@ -209,14 +305,30 @@
             "database",
             "password_hash"
           ],
-          "answer": "flex-wrap"
+          "answer": "flex-wrap",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "کلمهٔ کلیدی مثال را کامل کن.",
           "explanation": "این واژه در مثال آموزشی استفاده شده است.",
           "code": "<____>محتوا</flex-wrap>",
-          "answer": "flex-wrap"
+          "answer": "flex-wrap",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -227,7 +339,15 @@
             "SQL فقط",
             "شبکه"
           ],
-          "answer": "HTML و CSS"
+          "answer": "HTML و CSS",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -240,7 +360,15 @@
           "answer": [
             "<p>سلام",
             "</p>"
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -252,7 +380,15 @@
             "p",
             "هیچ‌چیز"
           ],
-          "answer": "سلام وب"
+          "answer": "سلام وب",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -263,7 +399,15 @@
             {
               "expected_output": "<p>تمرین</p>"
             }
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     },
@@ -282,14 +426,30 @@
             "حذف همه تگ‌ها",
             "اجرای کد روی سرور"
           ],
-          "answer": "تمرین مفهوم در نمونه واقعی"
+          "answer": "تمرین مفهوم در نمونه واقعی",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "نام ویژگی یا تگ اصلی این درس را بنویس.",
           "explanation": "نام اصلی در مثال همین درس دیده می‌شود.",
           "code": "نام مفهوم: ____",
-          "answer": "flex-wrap"
+          "answer": "flex-wrap",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -300,7 +460,15 @@
             "نادیده گرفتن خطا",
             "حذف عنوان"
           ],
-          "answer": "بررسی نتیجه"
+          "answer": "بررسی نتیجه",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -313,7 +481,15 @@
           "answer": [
             "<h1>عنوان",
             "</h1>"
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -325,7 +501,15 @@
             "h1",
             "کد اجرا نمی‌شود"
           ],
-          "answer": "کدفا"
+          "answer": "کدفا",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -336,7 +520,15 @@
             {
               "expected_output": "<h1>کدفا</h1>"
             }
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     }
