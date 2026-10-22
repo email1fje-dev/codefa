@@ -1,0 +1,1 @@
+function errors(err,req,res,next){if(res.headersSent)return next(err);console.error(err.message);res.status(err.status||500).json({error:err.status&&err.status<500?err.message:'خطای داخلی رخ داد. لطفاً دوباره تلاش کنید.'});}module.exports={errors};
