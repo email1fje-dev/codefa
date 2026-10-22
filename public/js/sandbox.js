@@ -2,7 +2,8 @@
   const status = document.getElementById('status');
   const outputEl = document.getElementById('output');
   const previewEl = document.getElementById('preview');
-  let pyodidePromise = null;\n  const originalFetch = window.fetch.bind(window);
+  let pyodidePromise = null;
+  const originalFetch = window.fetch.bind(window);
   let output = '';
   const MAX_OUTPUT = 100 * 1024;
   const errorFa = {
@@ -35,6 +36,7 @@
     pyodidePromise=(async()=>{
       tell('progress',{message:'در حال آماده‌سازی Python...'});
       status.textContent='در حال آماده‌سازی Python...';
+      window.fetch = originalFetch;
       const mod=await import('/vendor/pyodide/pyodide.mjs');
       const py=await mod.loadPyodide({indexURL:'/vendor/pyodide/'});
       blockNetwork();
