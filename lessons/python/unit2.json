@@ -1,0 +1,562 @@
+{
+  "course": "python",
+  "unit": {
+    "id": "unit2",
+    "title": "متغیر، انواع داده و input",
+    "description": "ذخیره مقدار در متغیر، تبدیل ورودی و تشخیص نوع داده."
+  },
+  "lessons": [
+    {
+      "id": "python-unit2-lesson1",
+      "title": "ساخت متغیر",
+      "intro": "با علامت = مقدار را به یک نام نسبت می‌دهیم. نام متغیر باید معنی‌دار باشد.\n\nمثال:\n```python\ncity = 'شیراز'\nprint(city)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "با علامت = مقدار را به یک نام نسبت می‌دهیم. نام متغیر باید معنی‌دار باشد.",
+          "options": [
+            "ساخت متغیر",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "ساخت متغیر",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "city = 'شیراز'\nprint(city)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = 'شیراز'",
+          "answer": "city",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "city = 'شیراز'",
+            "print(city)"
+          ],
+          "answer": [
+            "city = 'شیراز'",
+            "print(city)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "city = 'شیراز'\nprint(city)",
+          "options": [
+            "شیراز",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "شیراز",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «شیراز» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"شیراز\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "شیراز"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "city = 'شیراز'\nprint(city)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "شیراز"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit2-lesson2",
+      "title": "عدد و رشته",
+      "intro": "int برای عدد صحیح و str برای متن است. ورودی input همیشه متن برمی‌گرداند.\n\nمثال:\n```python\nage = int('13')\nprint(age + 1)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "int برای عدد صحیح و str برای متن است. ورودی input همیشه متن برمی‌گرداند.",
+          "options": [
+            "عدد و رشته",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "عدد و رشته",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "age = int('13')\nprint(age + 1)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = int('13')",
+          "answer": "int",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "age = int('13')",
+            "print(age + 1)"
+          ],
+          "answer": [
+            "age = int('13')",
+            "print(age + 1)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "age = int('13')\nprint(age + 1)",
+          "options": [
+            "14",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "14",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «14» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"14\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "14"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "age = int('13')\nprint(age + 1)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "14"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit2-lesson3",
+      "title": "گرفتن ورودی",
+      "intro": "input() متن واردشده را می‌گیرد؛ در برنامه تعاملی می‌توان از کاربر نام پرسید.\n\nمثال:\n```python\nname = 'پارسا'\nprint('سلام', name)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "input() متن واردشده را می‌گیرد؛ در برنامه تعاملی می‌توان از کاربر نام پرسید.",
+          "options": [
+            "گرفتن ورودی",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "گرفتن ورودی",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "name = 'پارسا'\nprint('سلام', name)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = 'پارسا'",
+          "answer": "name",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "name = 'پارسا'",
+            "print('سلام', name)"
+          ],
+          "answer": [
+            "name = 'پارسا'",
+            "print('سلام', name)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "name = 'پارسا'\nprint('سلام', name)",
+          "options": [
+            "سلام پارسا",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "سلام پارسا",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «پارسا» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"پارسا\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "پارسا"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "name = 'پارسا'\nprint('سلام', name)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "سلام پارسا"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit2-lesson4",
+      "title": "مقدارهای درست و نادرست",
+      "intro": "True و False مقدارهای بولی هستند و برای تصمیم‌گیری کاربرد دارند.\n\nمثال:\n```python\nis_student = True\nprint(is_student)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "True و False مقدارهای بولی هستند و برای تصمیم‌گیری کاربرد دارند.",
+          "options": [
+            "مقدارهای درست و نادرست",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "مقدارهای درست و نادرست",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "is_student = True\nprint(is_student)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = True",
+          "answer": "True",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "is_student = True",
+            "print(is_student)"
+          ],
+          "answer": [
+            "is_student = True",
+            "print(is_student)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "is_student = True\nprint(is_student)",
+          "options": [
+            "True",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "True",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «False» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"False\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "False"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "is_student = True\nprint(is_student)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "True"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    }
+  ]
+}
