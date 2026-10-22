@@ -70,7 +70,7 @@
           "type": "code_exercise",
           "prompt": "آرایه‌ای با اعداد 2 و 4 بساز.",
           "explanation": "مقادیر را داخل کروشه و جداشده با ویرگول بنویس.",
-          "starter_code": "const nums = [2,4];",
+          "starter_code": "const nums = [2,4];\nconsole.log(nums.join(','));",
           "tests": [
             {
               "expected_output": "2,4"
@@ -145,7 +145,7 @@
           "type": "code_exercise",
           "prompt": "آبجکتی با ویژگی name برابر 'Mina' بساز.",
           "explanation": "کلید name و مقدار رشته‌ای را بنویس.",
-          "starter_code": "const person = {name:'Mina'};",
+          "starter_code": "const person = {name:'Mina'};\nconsole.log(person.name);",
           "tests": [
             {
               "expected_output": "Mina"
