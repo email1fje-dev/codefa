@@ -38,7 +38,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "def greet():",
+          "code": "____ greet():\n    print('سلام')\ngreet()\n",
           "answer": "def",
           "language": "python",
           "hints": [
@@ -56,9 +56,9 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "def greet():",
+            "greet()",
             "    print('سلام')",
-            "greet()"
+            "def greet():"
           ],
           "answer": [
             "def greet():",
@@ -178,7 +178,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "def greet(name):",
+          "code": "def greet(____):\n    print('سلام', name)\ngreet('مینا')\n",
           "answer": "name",
           "language": "python",
           "hints": [
@@ -196,9 +196,9 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "def greet(name):",
+            "greet('مینا')",
             "    print('سلام', name)",
-            "greet('مینا')"
+            "def greet(name):"
           ],
           "answer": [
             "def greet(name):",
@@ -318,7 +318,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "def add(a, b):",
+          "code": "def add(a, b):\n    ____ a + b\nprint(add(2, 3))\n",
           "answer": "return",
           "language": "python",
           "hints": [
@@ -336,9 +336,9 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "def add(a, b):",
+            "print(add(2, 3))",
             "    return a + b",
-            "print(add(2, 3))"
+            "def add(a, b):"
           ],
           "answer": [
             "def add(a, b):",
@@ -458,7 +458,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "def toman_with_tax(price):",
+          "code": "def ____(price):\n    return price * 1.1\nprint(toman_with_tax(1000))\n",
           "answer": "toman_with_tax",
           "language": "python",
           "hints": [
@@ -476,9 +476,9 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "def toman_with_tax(price):",
+            "print(toman_with_tax(1000))",
             "    return price * 1.1",
-            "print(toman_with_tax(1000))"
+            "def toman_with_tax(price):"
           ],
           "answer": [
             "def toman_with_tax(price):",
