@@ -1,0 +1,162 @@
+{
+  "course": "html-css",
+  "unit": {
+    "id": "unit5",
+    "title": "Flexbox و طرح‌بندی",
+    "description": "عنصرها را کنار هم و مرتب بچین."
+  },
+  "lessons": [
+    {
+      "id": "html-5-1",
+      "title": "شروع Flexbox",
+      "intro": "با display:flex می‌توان فرزندان یک عنصر را در یک ردیف یا ستون چید. justify-content توزیع فضا در محور اصلی را تنظیم می‌کند.\nمثال: .row { display: flex; gap: 12px; }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "برای فعال‌کردن Flexbox چه می‌نویسیم؟",
+          "explanation": "display:flex چیدمان فلکس را فعال می‌کند.",
+          "options": [
+            "display: flex",
+            "position: flex",
+            "flex: display"
+          ],
+          "answer": "display: flex"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "چیدمان فلکس را فعال کن.",
+          "explanation": "display ویژگی نمایش است.",
+          "code": ".row { display: ____; }",
+          "answer": "flex"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "gap چه چیزی را کنترل می‌کند؟",
+          "explanation": "gap فاصله بین آیتم‌ها را مشخص می‌کند.",
+          "options": [
+            "فاصله بین آیتم‌ها",
+            "رنگ متن",
+            "اندازه تصویر"
+          ],
+          "answer": "فاصله بین آیتم‌ها"
+        },
+        {
+          "type": "reorder",
+          "prompt": "قانون را مرتب کن.",
+          "explanation": "display داخل قانون انتخابگر قرار می‌گیرد.",
+          "lines": [
+            "display: flex;",
+            ".row {",
+            "}"
+          ],
+          "answer": [
+            ".row {",
+            "display: flex;",
+            "}"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "Flexbox معمولاً برای چیست؟",
+          "explanation": "فلکس برای چیدمان انعطاف‌پذیر عناصر کاربرد دارد.",
+          "code": ".row { display: flex; }",
+          "options": [
+            "چیدمان عناصر",
+            "ثبت‌نام کاربر",
+            "تغییر آدرس"
+          ],
+          "answer": "چیدمان عناصر"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک کلاس row با display:flex بنویس.",
+          "explanation": "از انتخابگر کلاس استفاده کن.",
+          "starter_code": ".row { display: flex; }",
+          "tests": [
+            {
+              "expected_output": ".row { display: flex; }"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-5-2",
+      "title": "هم‌ترازی و فاصله",
+      "intro": "align-items عناصر را در محور متقاطع هم‌تراز می‌کند. justify-content در محور اصلی توزیع فضا را انجام می‌دهد. این دو ویژگی برای نوارها و کارت‌ها مفیدند.\nمثال: .row { display:flex; align-items:center; justify-content:space-between; }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "برای هم‌ترازی عمودی در ردیف فلکس معمولاً چه ویژگی‌ای کاربرد دارد؟",
+          "explanation": "align-items محور متقاطع را تنظیم می‌کند.",
+          "options": [
+            "align-items",
+            "font-weight",
+            "href"
+          ],
+          "answer": "align-items"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "مقدار فاصله‌گذاری بین دو طرف را کامل کن.",
+          "explanation": "space-between فاصله بین آیتم‌ها را توزیع می‌کند.",
+          "code": ".row { justify-content: ____; }",
+          "answer": "space-between"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "center چه مفهومی دارد؟",
+          "explanation": "center یعنی در مرکز قرار گرفتن.",
+          "options": [
+            "مرکز",
+            "چپ‌چین همیشه",
+            "مخفی"
+          ],
+          "answer": "مرکز"
+        },
+        {
+          "type": "reorder",
+          "prompt": "ویژگی‌ها را مرتب کن.",
+          "explanation": "همه ویژگی‌ها داخل آکولاد می‌آیند.",
+          "lines": [
+            "align-items: center;",
+            "display: flex;",
+            " .row {",
+            "}"
+          ],
+          "answer": [
+            " .row {",
+            "display: flex;",
+            "align-items: center;",
+            "}"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "justify-content: center چه می‌کند؟",
+          "explanation": "آیتم‌ها را در محور اصلی وسط‌چین می‌کند.",
+          "code": ".row { display:flex; justify-content:center; }",
+          "options": [
+            "وسط‌چین محور اصلی",
+            "حذف عنصر",
+            "تغییر رنگ"
+          ],
+          "answer": "وسط‌چین محور اصلی"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "آیتم‌ها را در محور اصلی وسط‌چین کن.",
+          "explanation": "از justify-content استفاده کن.",
+          "starter_code": ".row { display: flex; justify-content: center; }",
+          "tests": [
+            {
+              "expected_output": ".row { display: flex; justify-content: center; }"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
