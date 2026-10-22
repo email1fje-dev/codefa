@@ -1,0 +1,1 @@
+window.showToast=window.toast||function(message){const n=document.createElement('div');n.className='toast';n.textContent=String(message);document.body.appendChild(n);setTimeout(()=>n.remove(),3500)};
