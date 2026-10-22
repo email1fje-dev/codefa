@@ -1,0 +1,19 @@
+name: Verify CodeFa
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  syntax-and-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --ignore-scripts
+      - name: Check JavaScript syntax
+        run: find server.js db routes middleware services public/js -name '*.js' -type f -print0 | xargs -0 -n1 node --check
+      - name: Validate lesson JSON
+        run: node -e "const fs=require('fs'),p=require('path'); for(const c of ['html-css','javascript']) for(const f of fs.readdirSync('lessons/'+c)) { const x=JSON.parse(fs.readFileSync(p.join('lessons',c,f),'utf8')); if(!Array.isArray(x.lessons)||x.lessons.length<4) throw Error('Invalid lessons: '+f); for(const l of x.lessons) if(!Array.isArray(l.exercises)||l.exercises.length<6) throw Error('Invalid exercises: '+l.title); } console.log('Lesson JSON valid');"
