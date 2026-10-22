@@ -1,0 +1,160 @@
+{
+  "course": "javascript",
+  "unit": {
+    "id": "unit5",
+    "title": "آرایه و آبجکت",
+    "description": "چند مقدار را کنار هم نگه دار."
+  },
+  "lessons": [
+    {
+      "id": "js-5-1",
+      "title": "آرایه‌ها",
+      "intro": "آرایه فهرستی از مقادیر است. شماره‌گذاری خانه‌ها از صفر آغاز می‌شود. برای دسترسی به خانه، اندیس را داخل کروشه می‌نویسیم.\nمثال: const colors = ['red','green']; console.log(colors[0]);",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "اندیس اولین خانه آرایه چیست؟",
+          "explanation": "آرایه‌ها از اندیس صفر شروع می‌شوند.",
+          "options": [
+            "0",
+            "1",
+            "-1"
+          ],
+          "answer": "0"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "به اولین خانه آرایه دسترسی پیدا کن.",
+          "explanation": "از اندیس صفر استفاده کن.",
+          "code": "colors[____]",
+          "answer": "0"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "آرایه برای چه کاربردی است؟",
+          "explanation": "آرایه چند مقدار را در یک مجموعه نگه می‌دارد.",
+          "options": [
+            "نگهداری چند مقدار",
+            "ساخت رنگ CSS",
+            "تعریف HTML"
+          ],
+          "answer": "نگهداری چند مقدار"
+        },
+        {
+          "type": "reorder",
+          "prompt": "آرایه را مرتب کن.",
+          "explanation": "مقادیر داخل کروشه قرار می‌گیرند.",
+          "lines": [
+            "'blue'];",
+            "const colors = ['red',",
+            ""
+          ],
+          "answer": [
+            "const colors = ['red',",
+            "'blue'];",
+            ""
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "خانه صفر مقدار نخست را دارد.",
+          "code": "const nums=[7,9]; console.log(nums[0]);",
+          "options": [
+            "7",
+            "9",
+            "0"
+          ],
+          "answer": "7"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "آرایه‌ای با اعداد 2 و 4 بساز.",
+          "explanation": "مقادیر را داخل کروشه و جداشده با ویرگول بنویس.",
+          "starter_code": "const nums = [2,4];",
+          "tests": [
+            {
+              "expected_output": "2,4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "js-5-2",
+      "title": "آبجکت‌ها",
+      "intro": "آبجکت داده‌ها را به شکل ویژگی و مقدار نگه می‌دارد. ویژگی‌ها را با نقطه یا براکت می‌خوانیم.\nمثال: const user = {name:'Ali', age:20}; console.log(user.name);",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "آبجکت داده‌ها را چطور سازمان‌دهی می‌کند؟",
+          "explanation": "با جفت‌های کلید و مقدار.",
+          "options": [
+            "کلید و مقدار",
+            "فقط اعداد",
+            "فقط رنگ‌ها"
+          ],
+          "answer": "کلید و مقدار"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "ویژگی name را بخوان.",
+          "explanation": "از نقطه و نام ویژگی استفاده کن.",
+          "code": "user.____",
+          "answer": "name"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام مقدار یک آبجکت است؟",
+          "explanation": "آبجکت با آکولاد ساخته می‌شود.",
+          "options": [
+            "{name:'Sara'}",
+            "[1,2]",
+            "'text'"
+          ],
+          "answer": "{name:'Sara'}"
+        },
+        {
+          "type": "reorder",
+          "prompt": "آبجکت را مرتب کن.",
+          "explanation": "ویژگی‌ها داخل آکولاد می‌آیند.",
+          "lines": [
+            "age: 13",
+            "const user = {",
+            "};"
+          ],
+          "answer": [
+            "const user = {",
+            "age: 13",
+            "};"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "ویژگی name مقدار Ali را دارد.",
+          "code": "const user={name:'Ali'}; console.log(user.name);",
+          "options": [
+            "Ali",
+            "name",
+            "undefined"
+          ],
+          "answer": "Ali"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "آبجکتی با ویژگی name برابر 'Mina' بساز.",
+          "explanation": "کلید name و مقدار رشته‌ای را بنویس.",
+          "starter_code": "const person = {name:'Mina'};",
+          "tests": [
+            {
+              "expected_output": "Mina"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
