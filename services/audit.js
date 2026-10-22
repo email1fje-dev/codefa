@@ -1,0 +1,1 @@
+const pool=require('../db/pool');async function audit(adminId,action,targetType,targetId,details={}){await pool.query('INSERT INTO audit_log(admin_id,action,target_type,target_id,details) VALUES($1,$2,$3,$4,$5)',[adminId,action,targetType,String(targetId??''),JSON.stringify(details)]);}module.exports={audit};
