@@ -1,0 +1,160 @@
+{
+  "course": "javascript",
+  "unit": {
+    "id": "unit3",
+    "title": "حلقه‌ها",
+    "description": "کار تکراری را به حلقه بسپار."
+  },
+  "lessons": [
+    {
+      "id": "js-3-1",
+      "title": "حلقه for",
+      "intro": "حلقه for کد را چند بار اجرا می‌کند. بخش آغاز، شرط و تغییر شمارنده در پرانتز قرار می‌گیرند.\nمثال:\nfor (let i = 0; i < 3; i++) { console.log(i); }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام ساختار برای تکرار است؟",
+          "explanation": "for یک حلقه است.",
+          "options": [
+            "for",
+            "if",
+            "const"
+          ],
+          "answer": "for"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "حلقه را تا وقتی i کمتر از 5 است ادامه بده.",
+          "explanation": "شرط حلقه در بخش میانی است.",
+          "code": "for (let i=0; i ____ 5; i++) {}",
+          "answer": "<"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "i++ چه می‌کند؟",
+          "explanation": "i را یک واحد افزایش می‌دهد.",
+          "options": [
+            "افزایش یک‌واحدی",
+            "حذف متغیر",
+            "چاپ مقدار"
+          ],
+          "answer": "افزایش یک‌واحدی"
+        },
+        {
+          "type": "reorder",
+          "prompt": "اجزای حلقه را مرتب کن.",
+          "explanation": "ساختار for با پرانتز و بدنه نوشته می‌شود.",
+          "lines": [
+            "console.log(i);",
+            "for (let i=0; i<2; i++) {",
+            "}"
+          ],
+          "answer": [
+            "for (let i=0; i<2; i++) {",
+            "console.log(i);",
+            "}"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "چند بار hello چاپ می‌شود؟",
+          "explanation": "i از صفر تا کمتر از سه می‌رود؛ سه بار اجرا می‌شود.",
+          "code": "for(let i=0;i<3;i++) console.log('hello');",
+          "options": [
+            "۲ بار",
+            "۳ بار",
+            "۴ بار"
+          ],
+          "answer": "۳ بار"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "حلقه‌ای بنویس که اعداد صفر تا دو را چاپ کند.",
+          "explanation": "شرط i<3 سه بار اجرا می‌شود.",
+          "starter_code": "for (let i=0; i<3; i++) console.log(i);",
+          "tests": [
+            {
+              "expected_output": "0\\n1\\n2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "js-3-2",
+      "title": "حلقه while",
+      "intro": "حلقه while تا زمانی که شرط درست باشد اجرا می‌شود. حتماً مطمئن شو در نهایت شرط نادرست می‌شود تا حلقه بی‌نهایت نسازی.\nمثال:\nlet n = 3; while (n > 0) { n--; }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "while چه زمانی ادامه پیدا می‌کند؟",
+          "explanation": "تا وقتی شرط true باشد.",
+          "options": [
+            "تا وقتی شرط درست است",
+            "فقط یک بار",
+            "هیچ‌وقت"
+          ],
+          "answer": "تا وقتی شرط درست است"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "کلمه حلقه را کامل کن.",
+          "explanation": "ساختار while شرط می‌گیرد.",
+          "code": "____ (count > 0) { count--; }",
+          "answer": "while"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "چرا شمارنده را تغییر می‌دهیم؟",
+          "explanation": "برای رسیدن به شرط توقف.",
+          "options": [
+            "برای پایان حلقه",
+            "برای تغییر رنگ",
+            "برای ساخت تابع"
+          ],
+          "answer": "برای پایان حلقه"
+        },
+        {
+          "type": "reorder",
+          "prompt": "حلقه را مرتب کن.",
+          "explanation": "شرط در while و سپس بدنه است.",
+          "lines": [
+            "count--;",
+            "while (count > 0) {",
+            "}"
+          ],
+          "answer": [
+            "while (count > 0) {",
+            "count--;",
+            "}"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "مقدار نهایی n چیست؟",
+          "explanation": "دو بار از 2 کم می‌شود تا صفر شود.",
+          "code": "let n=2; while(n>0) n--; console.log(n);",
+          "options": [
+            "0",
+            "1",
+            "2"
+          ],
+          "answer": "0"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "با while مقدار n را از 2 به صفر برسان.",
+          "explanation": "در هر دور n را کم کن.",
+          "starter_code": "let n=2; while(n>0){n--;} console.log(n);",
+          "tests": [
+            {
+              "expected_output": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
