@@ -99,12 +99,12 @@ finally:
     sys.settrace(None)
 `;
       py.globals.set('__codefa_user_code',String(msg.code||''));
-      try { await py.runPythonAsync(prelude+tracePrelude); const steps=py.globals.get('__codefa_steps'); const jsSteps=steps?steps.toJs({dict_converter:Object.fromEntries}):[]; tell('result',{ok:true,output:bounded(output),steps:Array.from(jsSteps).slice(0,300)}); }
-      catch(e){tell('result',{ok:false,output:bounded(output),error:pythonError(e)});}
+      try { await py.runPythonAsync(prelude+tracePrelude); const steps=py.globals.get('__codefa_steps'); const jsSteps=steps?steps.toJs({dict_converter:Object.fromEntries}):[]; tell('result',{requestId:msg.requestId,ok:true,output:bounded(output),steps:Array.from(jsSteps).slice(0,300)}); }
+      catch(e){tell('result',{requestId:msg.requestId,ok:false,output:bounded(output),error:pythonError(e)});}
       return;
     }
-    try { await py.runPythonAsync(prelude+String(msg.code||'')); tell('result',{ok:true,output:bounded(output)}); }
-    catch(e){tell('result',{ok:false,output:bounded(output),error:pythonError(e)});}
+    try { await py.runPythonAsync(prelude+String(msg.code||'')); tell('result',{requestId:msg.requestId,ok:true,output:bounded(output)}); }
+    catch(e){tell('result',{requestId:msg.requestId,ok:false,output:bounded(output),error:pythonError(e)});}
   }
   function runJavaScript(msg) {
     output='';
@@ -127,7 +127,7 @@ finally:
       const start=performance.now();
       if(String(files.js||'').trim())new Function('console','root','"use strict";\n'+String(files.js))(fakeConsole,frame);
       tell('result',{ok:true,output:bounded(logs.join('\n')||'پیش‌نمایش وب به‌روزرسانی شد.'),runtime:Math.round(performance.now()-start),preview:true});
-    } catch(e){tell('result',{ok:false,output:'',error:jsError(e)});}
+    } catch(e){tell('result',{requestId:msg.requestId,ok:false,output:'',error:jsError(e)});}
   }
   window.addEventListener('message', async event=>{
     if(event.source!==parent || event.origin==='null')return;
