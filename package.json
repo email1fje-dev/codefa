@@ -4,8 +4,12 @@
   "private": true,
   "description": "آموزش بازی‌وار برنامه‌نویسی به زبان فارسی",
   "main": "server.js",
-  "scripts": { "start": "node server.js" },
-  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.7",
@@ -14,6 +18,9 @@
     "express-rate-limit": "^7.5.0",
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
-    "pg": "^8.13.1"
+    "pg": "^8.13.1",
+    "pyodide": "0.29.5",
+    "codemirror": "5.65.21",
+    "compression": "1.8.2"
   }
 }
