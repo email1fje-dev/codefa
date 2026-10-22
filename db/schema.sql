@@ -64,3 +64,6 @@ INSERT INTO achievements(code,title,description,icon) VALUES
  ('xp_1000','هزار XP','به ۱۰۰۰ امتیاز رسیدی.','💎'),
  ('review_five','مرور عالی','پنج تمرین اشتباه را مرور کردی.','🧠')
 ON CONFLICT(code) DO NOTHING;
+
+CREATE TABLE IF NOT EXISTS playground_run_events(id BIGSERIAL PRIMARY KEY,user_id BIGINT REFERENCES users(id) ON DELETE SET NULL,language VARCHAR(16) NOT NULL,created_at TIMESTAMPTZ NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS playground_run_events_created_idx ON playground_run_events(created_at);
