@@ -31,10 +31,10 @@
     try { window.WebSocket = class { constructor(){throw new Error('دسترسی شبکه در محیط ایزوله غیرفعال است.')} }; } catch {}
     try { window.EventSource = class { constructor(){throw new Error('دسترسی شبکه در محیط ایزوله غیرفعال است.')} }; } catch {}
   }
-  async function loadPython() {
+  async function loadPython(msg) {
     if(pyodidePromise)return pyodidePromise;
     pyodidePromise=(async()=>{
-      tell('progress',{message:'در حال آماده‌سازی Python...'});
+      tell('progress',{requestId:msg.requestId,message:'در حال آماده‌سازی Python...'});
       status.textContent='در حال آماده‌سازی Python...';
       window.fetch = originalFetch;
       const mod=await import('/vendor/pyodide/pyodide.mjs');
@@ -42,7 +42,7 @@
       blockNetwork();
       py.setStdout({batched:s=>{output+=String(s)+'\n';output=bounded(output)}});
       py.setStderr({batched:s=>{output+='[خطا] '+String(s)+'\n';output=bounded(output)}});
-      tell('progress',{message:'Python آماده است.'});
+      tell('progress',{requestId:msg.requestId,message:'Python آماده است.'});
       return py;
     })();
     return pyodidePromise;
@@ -60,7 +60,7 @@
     return {raw,explanation:errorFa[type]||'کد را از نظر پرانتزها، نام متغیرها و نوع داده‌ها بررسی کن.',line};
   }
   async function runPython(msg) {
-    const py=await loadPython();
+    const py=await loadPython(msg);
     output='';
     const inputs=String(msg.stdin||'').replace(/\r/g,'').split('\n'); let inputIndex=0;
     py.globals.set('__codefa_input_json',JSON.stringify(inputs));
