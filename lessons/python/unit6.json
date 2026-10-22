@@ -38,7 +38,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = ['تهران', 'تبریز']",
+          "code": "____ = ['تهران', 'تبریز']\nprint(cities[0])\n",
           "answer": "cities",
           "language": "python",
           "hints": [
@@ -56,8 +56,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "cities = ['تهران', 'تبریز']",
-            "print(cities[0])"
+            "print(cities[0])",
+            "cities = ['تهران', 'تبریز']"
           ],
           "answer": [
             "cities = ['تهران', 'تبریز']",
@@ -176,7 +176,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = [12, 15]",
+          "code": "scores = [12, 15]\nscores.____(19)\nprint(len(scores))\n",
           "answer": "append",
           "language": "python",
           "hints": [
@@ -194,9 +194,9 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "scores = [12, 15]",
+            "print(len(scores))",
             "scores.append(19)",
-            "print(len(scores))"
+            "scores = [12, 15]"
           ],
           "answer": [
             "scores = [12, 15]",
@@ -316,7 +316,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = {'name': 'آوا'}",
+          "code": "____ = {'name': 'آوا'}\nprint(person['name'])\n",
           "answer": "person",
           "language": "python",
           "hints": [
@@ -334,8 +334,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "person = {'name': 'آوا'}",
-            "print(person['name'])"
+            "print(person['name'])",
+            "person = {'name': 'آوا'}"
           ],
           "answer": [
             "person = {'name': 'آوا'}",
@@ -454,7 +454,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = 'Python'",
+          "code": "word = 'Python'\nprint(____(word))\n",
           "answer": "len",
           "language": "python",
           "hints": [
@@ -472,8 +472,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "word = 'Python'",
-            "print(len(word))"
+            "print(len(word))",
+            "word = 'Python'"
           ],
           "answer": [
             "word = 'Python'",
