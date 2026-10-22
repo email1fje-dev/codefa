@@ -119,9 +119,9 @@
           "prompt": "شرط را مرتب کن.",
           "explanation": "if شرط را در پرانتز می‌گیرد.",
           "lines": [
+            "}",
             "console.log('بله');",
-            "if (ok) {",
-            "}"
+            "if (ok) {"
           ],
           "answer": [
             "if (ok) {",
