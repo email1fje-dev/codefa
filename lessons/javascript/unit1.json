@@ -47,13 +47,11 @@
           "explanation": "ابتدا let، سپس نام و مقدار می‌آید.",
           "lines": [
             "= 5;",
-            "let level",
-            ""
+            "let level"
           ],
           "answer": [
             "let level",
-            "= 5;",
-            ""
+            "= 5;"
           ]
         },
         {
