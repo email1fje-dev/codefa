@@ -38,7 +38,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = 120000",
+          "code": "price = 120000\nprint(price ____ 20000)\n",
           "answer": "-",
           "language": "python",
           "hints": [
@@ -56,8 +56,8 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "price = 120000",
-            "print(price - 20000)"
+            "print(price - 20000)",
+            "price = 120000"
           ],
           "answer": [
             "price = 120000",
@@ -176,7 +176,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "print(15 >= 10)",
+          "code": "print(15 ____ 10)\n",
           "answer": ">=",
           "language": "python",
           "hints": [
@@ -194,10 +194,12 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "print(15 >= 10)"
+            "print('آفرین')",
+            "message = 'سلام'"
           ],
           "answer": [
-            "print(15 >= 10)"
+            "message = 'سلام'",
+            "print('آفرین')"
           ],
           "language": "python",
           "hints": [
@@ -312,7 +314,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = 18",
+          "code": "score = 18\n____ score >= 10:\n    print('قبول')\n",
           "answer": "if",
           "language": "python",
           "hints": [
@@ -330,9 +332,9 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "score = 18",
+            "    print('قبول')",
             "if score >= 10:",
-            "    print('قبول')"
+            "score = 18"
           ],
           "answer": [
             "score = 18",
@@ -452,7 +454,7 @@
           "type": "fill_blank",
           "prompt": "جای خالی را با واژه مناسب پر کن.",
           "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
-          "code": "____ = 5000",
+          "code": "money = 5000\nif money >= 10000:\n    print('می‌خرم')\n____:\n    print('پس‌انداز')\n",
           "answer": "else",
           "language": "python",
           "hints": [
@@ -470,11 +472,11 @@
           "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
           "explanation": "ترتیب تعریف و اجرای کد مهم است.",
           "lines": [
-            "money = 5000",
-            "if money >= 10000:",
-            "    print('می‌خرم')",
+            "    print('پس‌انداز')",
             "else:",
-            "    print('پس‌انداز')"
+            "    print('می‌خرم')",
+            "if money >= 10000:",
+            "money = 5000"
           ],
           "answer": [
             "money = 5000",
