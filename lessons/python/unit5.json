@@ -1,0 +1,570 @@
+{
+  "course": "python",
+  "unit": {
+    "id": "unit5",
+    "title": "تابع‌ها",
+    "description": "تعریف تابع، پارامتر، مقدار بازگشتی و استفاده دوباره از کد."
+  },
+  "lessons": [
+    {
+      "id": "python-unit5-lesson1",
+      "title": "تعریف تابع",
+      "intro": "با def یک تابع می‌سازیم و بدنه‌اش را با تورفتگی می‌نویسیم.\n\nمثال:\n```python\ndef greet():\n    print('سلام')\ngreet()\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "با def یک تابع می‌سازیم و بدنه‌اش را با تورفتگی می‌نویسیم.",
+          "options": [
+            "تعریف تابع",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "تعریف تابع",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "def greet():\n    print('سلام')\ngreet()"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "def greet():",
+          "answer": "def",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "def greet():",
+            "    print('سلام')",
+            "greet()"
+          ],
+          "answer": [
+            "def greet():",
+            "    print('سلام')",
+            "greet()"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "def greet():\n    print('سلام')\ngreet()",
+          "options": [
+            "سلام",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "سلام",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «سلام» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"سلام\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "سلام"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "def greet():\n    print('سلام')\ngreet()",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "سلام"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit5-lesson2",
+      "title": "پارامتر تابع",
+      "intro": "پارامتر داده‌ای است که هنگام فراخوانی به تابع می‌دهیم.\n\nمثال:\n```python\ndef greet(name):\n    print('سلام', name)\ngreet('مینا')\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "پارامتر داده‌ای است که هنگام فراخوانی به تابع می‌دهیم.",
+          "options": [
+            "پارامتر تابع",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "پارامتر تابع",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "def greet(name):\n    print('سلام', name)\ngreet('مینا')"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "def greet(name):",
+          "answer": "name",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "def greet(name):",
+            "    print('سلام', name)",
+            "greet('مینا')"
+          ],
+          "answer": [
+            "def greet(name):",
+            "    print('سلام', name)",
+            "greet('مینا')"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "def greet(name):\n    print('سلام', name)\ngreet('مینا')",
+          "options": [
+            "سلام مینا",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "سلام مینا",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «مینا» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"مینا\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "مینا"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "def greet(name):\n    print('سلام', name)\ngreet('مینا')",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "سلام مینا"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit5-lesson3",
+      "title": "return",
+      "intro": "return نتیجه را به محل فراخوانی برمی‌گرداند.\n\nمثال:\n```python\ndef add(a, b):\n    return a + b\nprint(add(2, 3))\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "return نتیجه را به محل فراخوانی برمی‌گرداند.",
+          "options": [
+            "return",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "return",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "def add(a, b):\n    return a + b\nprint(add(2, 3))"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "def add(a, b):",
+          "answer": "return",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "def add(a, b):",
+            "    return a + b",
+            "print(add(2, 3))"
+          ],
+          "answer": [
+            "def add(a, b):",
+            "    return a + b",
+            "print(add(2, 3))"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "def add(a, b):\n    return a + b\nprint(add(2, 3))",
+          "options": [
+            "5",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "5",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «5» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"5\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "5"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "def add(a, b):\n    return a + b\nprint(add(2, 3))",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "5"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit5-lesson4",
+      "title": "تابع برای محاسبه",
+      "intro": "تابع‌ها فرمول را یک بار تعریف می‌کنند و بارها قابل استفاده‌اند.\n\nمثال:\n```python\ndef toman_with_tax(price):\n    return price * 1.1\nprint(toman_with_tax(1000))\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "تابع‌ها فرمول را یک بار تعریف می‌کنند و بارها قابل استفاده‌اند.",
+          "options": [
+            "تابع برای محاسبه",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "تابع برای محاسبه",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "def toman_with_tax(price):\n    return price * 1.1\nprint(toman_with_tax(1000))"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "def toman_with_tax(price):",
+          "answer": "toman_with_tax",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "def toman_with_tax(price):",
+            "    return price * 1.1",
+            "print(toman_with_tax(1000))"
+          ],
+          "answer": [
+            "def toman_with_tax(price):",
+            "    return price * 1.1",
+            "print(toman_with_tax(1000))"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "def toman_with_tax(price):\n    return price * 1.1\nprint(toman_with_tax(1000))",
+          "options": [
+            "1100.0",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "1100.0",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «1100.0» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"1100.0\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "1100.0"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "def toman_with_tax(price):\n    return price * 1.1\nprint(toman_with_tax(1000))",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "1100.0"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    }
+  ]
+}
