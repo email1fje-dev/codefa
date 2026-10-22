@@ -1,1 +1,2 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js').catch(()=>{});
 document.addEventListener('DOMContentLoaded',async()=>{let theme='dark';try{theme=localStorage.getItem('codefa-theme')||'dark'}catch{}try{if(window.api){const d=await api('/api/auth/me');theme=d.user.theme||theme;try{localStorage.setItem('codefa-theme',theme)}catch{}}}catch{}document.body.dataset.theme=theme==='light'?'light':'dark';});
