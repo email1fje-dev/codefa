@@ -13,6 +13,8 @@ const profileRoutes = require('./routes/profile');
 const notificationRoutes = require('./routes/notifications');
 const adminRoutes = require('./routes/admin');
 const { errors } = require('./middleware/errors');
+const pool = require('./db/pool');
+const jwt = require('jsonwebtoken');
 
 if (!process.env.DATABASE_URL) { console.error('خطا: متغیر DATABASE_URL تنظیم نشده است.'); process.exit(1); }
 if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 32) { console.error('خطا: JWT_SECRET باید حداقل ۳۲ نویسه باشد.'); process.exit(1); }
@@ -33,6 +35,7 @@ app.use('/api', leaderboardRoutes);
 app.use('/api', profileRoutes);
 app.use('/api', notificationRoutes);
 app.use('/api/admin', adminRoutes);
+app.get('/admin.html', async (req, res) => { try { const token=req.cookies.codefa_token; if(!token) return res.status(403).send('<!doctype html><html lang=fa dir=rtl><meta charset=utf-8><p>دسترسی مدیر لازم است. <a href="/">ورود</a></p>'); const decoded=jwt.verify(token,process.env.JWT_SECRET); const q=await pool.query('SELECT role,is_banned FROM users WHERE id=$1',[decoded.id]); if(!q.rowCount||q.rows[0].role!=='admin'||q.rows[0].is_banned) return res.status(403).send('<!doctype html><html lang=fa dir=rtl><meta charset=utf-8><meta http-equiv="refresh" content="2;url=/app.html"><p>دسترسی غیرمجاز؛ در حال بازگشت به اپ…</p>'); return res.sendFile(path.join(__dirname,'public','admin.html')); } catch(e) { return res.status(403).send('<!doctype html><html lang=fa dir=rtl><meta charset=utf-8><p>دسترسی غیرمجاز است. <a href="/app.html">بازگشت</a></p>'); } });
 app.use(express.static(path.join(__dirname, 'public')));
 app.use((_req, res) => res.status(404).sendFile(path.join(__dirname, 'public', '404.html')));
 app.use(errors);
