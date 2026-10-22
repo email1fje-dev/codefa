@@ -1,0 +1,160 @@
+{
+  "course": "html-css",
+  "unit": {
+    "id": "unit3",
+    "title": "لیست، جدول و فرم",
+    "description": "اطلاعات را منظم و قابل ورود کن."
+  },
+  "lessons": [
+    {
+      "id": "html-3-1",
+      "title": "لیست‌ها",
+      "intro": "برای لیست بدون ترتیب از ul و برای هر مورد از li استفاده می‌کنیم. اگر ترتیب مهم باشد، ol مناسب است.\nمثال: <ul><li>HTML</li><li>CSS</li></ul>",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "لیست بدون ترتیب با کدام تگ ساخته می‌شود؟",
+          "explanation": "ul فهرست بدون ترتیب است.",
+          "options": [
+            "ul",
+            "ol",
+            "li"
+          ],
+          "answer": "ul"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "تگ هر مورد لیست را کامل کن.",
+          "explanation": "هر مورد در li قرار می‌گیرد.",
+          "code": "<ul><____>سیب</li></ul>",
+          "answer": "li"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "برای لیست شماره‌دار از چه تگی استفاده می‌کنیم؟",
+          "explanation": "ol فهرست مرتب است.",
+          "options": [
+            "ol",
+            "ul",
+            "div"
+          ],
+          "answer": "ol"
+        },
+        {
+          "type": "reorder",
+          "prompt": "لیست را مرتب کن.",
+          "explanation": "li داخل ul قرار می‌گیرد.",
+          "lines": [
+            "</ul>",
+            "<ul>",
+            "<li>سیب</li>"
+          ],
+          "answer": [
+            "<ul>",
+            "<li>سیب</li>",
+            "</ul>"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "چند مورد در این لیست است؟",
+          "explanation": "دو تگ li یعنی دو مورد.",
+          "code": "<ul><li>الف</li><li>ب</li></ul>",
+          "options": [
+            "۱",
+            "۲",
+            "۳"
+          ],
+          "answer": "۲"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک لیست یک‌موردی با «کدنویسی» بساز.",
+          "explanation": "ul و li را کنار هم به‌کار ببر.",
+          "starter_code": "<ul><li>کدنویسی</li></ul>",
+          "tests": [
+            {
+              "expected_output": "<ul><li>کدنویسی</li></ul>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-3-2",
+      "title": "فرم و ورودی",
+      "intro": "فرم‌ها اطلاعات را از کاربر می‌گیرند. تگ input ورودی ایجاد می‌کند و label توضیح آن است. برای اتصال label و input از for و id یکسان استفاده کن.\nمثال: <label for=\"name\">نام</label><input id=\"name\" name=\"name\">",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "تگ ورودی کدام است؟",
+          "explanation": "input انواع ورودی مثل متن و ایمیل دارد.",
+          "options": [
+            "input",
+            "enter",
+            "formtext"
+          ],
+          "answer": "input"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "ویژگی شناسایی ورودی را کامل کن.",
+          "explanation": "id برای شناسایی عنصر است.",
+          "code": "<input ____=\"name\">",
+          "answer": "id"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "label چه کاری می‌کند؟",
+          "explanation": "برچسب، کاربرد ورودی را توضیح می‌دهد.",
+          "options": [
+            "توضیح ورودی",
+            "رنگ‌آمیزی صفحه",
+            "ساخت تصویر"
+          ],
+          "answer": "توضیح ورودی"
+        },
+        {
+          "type": "reorder",
+          "prompt": "فرم ساده را مرتب کن.",
+          "explanation": "ورودی داخل فرم قرار می‌گیرد.",
+          "lines": [
+            "</form>",
+            "<form>",
+            "<input name=\"email\">"
+          ],
+          "answer": [
+            "<form>",
+            "<input name=\"email\">",
+            "</form>"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "type=email برای چیست؟",
+          "explanation": "این نوع ورودی برای ایمیل است.",
+          "code": "<input type=\"email\">",
+          "options": [
+            "ورود ایمیل",
+            "انتخاب رنگ",
+            "پخش صدا"
+          ],
+          "answer": "ورود ایمیل"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک ورودی متن برای نام بساز.",
+          "explanation": "type=text ورودی متنی می‌سازد.",
+          "starter_code": "<input type=\"text\" name=\"name\">",
+          "tests": [
+            {
+              "expected_output": "<input type=\"text\" name=\"name\">"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
