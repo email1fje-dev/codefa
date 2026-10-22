@@ -1,0 +1,1 @@
+فونت Vazirmatn اختیاری است. فایل‌های Vazirmatn-Regular.woff2 و Vazirmatn-Bold.woff2 را از مخزن رسمی Vazirmatn در این پوشه قرار دهید. بدون این فایل‌ها، رابط با فونت‌های fallback نمایش داده می‌شود.
