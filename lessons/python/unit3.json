@@ -1,0 +1,568 @@
+{
+  "course": "python",
+  "unit": {
+    "id": "unit3",
+    "title": "عملگرها و شرط‌ها",
+    "description": "محاسبه، مقایسه و تصمیم‌گیری با if و else."
+  },
+  "lessons": [
+    {
+      "id": "python-unit3-lesson1",
+      "title": "محاسبه قیمت",
+      "intro": "عملگرهای +، -، * و / برای محاسبه به کار می‌روند.\n\nمثال:\n```python\nprice = 120000\nprint(price - 20000)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "عملگرهای +، -، * و / برای محاسبه به کار می‌روند.",
+          "options": [
+            "محاسبه قیمت",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "محاسبه قیمت",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "price = 120000\nprint(price - 20000)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = 120000",
+          "answer": "-",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "price = 120000",
+            "print(price - 20000)"
+          ],
+          "answer": [
+            "price = 120000",
+            "print(price - 20000)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "price = 120000\nprint(price - 20000)",
+          "options": [
+            "100000",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "100000",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «100000» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"100000\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "100000"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "price = 120000\nprint(price - 20000)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "100000"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit3-lesson2",
+      "title": "مقایسه مقدارها",
+      "intro": "عملگر == برابری و > بزرگ‌تر بودن را بررسی می‌کند.\n\nمثال:\n```python\nprint(15 >= 10)\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "عملگر == برابری و > بزرگ‌تر بودن را بررسی می‌کند.",
+          "options": [
+            "مقایسه مقدارها",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "مقایسه مقدارها",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "print(15 >= 10)"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "print(15 >= 10)",
+          "answer": ">=",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "print(15 >= 10)"
+          ],
+          "answer": [
+            "print(15 >= 10)"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "print(15 >= 10)",
+          "options": [
+            "True",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "True",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «True» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"True\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "True"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "print(15 >= 10)",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "True"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit3-lesson3",
+      "title": "دستور if",
+      "intro": "اگر شرط درست باشد، بلوک تو رفته‌ی if اجرا می‌شود.\n\nمثال:\n```python\nscore = 18\nif score >= 10:\n    print('قبول')\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "اگر شرط درست باشد، بلوک تو رفته‌ی if اجرا می‌شود.",
+          "options": [
+            "دستور if",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "دستور if",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "score = 18\nif score >= 10:\n    print('قبول')"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = 18",
+          "answer": "if",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "score = 18",
+            "if score >= 10:",
+            "    print('قبول')"
+          ],
+          "answer": [
+            "score = 18",
+            "if score >= 10:",
+            "    print('قبول')"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "score = 18\nif score >= 10:\n    print('قبول')",
+          "options": [
+            "قبول",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "قبول",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «قبول» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"قبول\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "قبول"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "score = 18\nif score >= 10:\n    print('قبول')",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "قبول"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-unit3-lesson4",
+      "title": "if و else",
+      "intro": "وقتی شرط درست نباشد، بخش else اجرا می‌شود.\n\nمثال:\n```python\nmoney = 5000\nif money >= 10000:\n    print('می‌خرم')\nelse:\n    print('پس‌انداز')\n```",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این مثال کدام مفهوم را نشان می‌دهد؟",
+          "explanation": "وقتی شرط درست نباشد، بخش else اجرا می‌شود.",
+          "options": [
+            "if و else",
+            "ساخت یک فایل تصویری",
+            "قالب‌بندی CSS"
+          ],
+          "answer": "if و else",
+          "language": "python",
+          "hints": [
+            "عنوان درس را با خط اول مثال مقایسه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": false
+          },
+          "code": "money = 5000\nif money >= 10000:\n    print('می‌خرم')\nelse:\n    print('پس‌انداز')"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "جای خالی را با واژه مناسب پر کن.",
+          "explanation": "واژه‌ی کلیدی در مثال همین درس استفاده شده است.",
+          "code": "____ = 5000",
+          "answer": "else",
+          "language": "python",
+          "hints": [
+            "به نام تابع یا متغیر در مثال نگاه کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "reorder",
+          "prompt": "خطوط کد را به ترتیب درست مرتب کن.",
+          "explanation": "ترتیب تعریف و اجرای کد مهم است.",
+          "lines": [
+            "money = 5000",
+            "if money >= 10000:",
+            "    print('می‌خرم')",
+            "else:",
+            "    print('پس‌انداز')"
+          ],
+          "answer": [
+            "money = 5000",
+            "if money >= 10000:",
+            "    print('می‌خرم')",
+            "else:",
+            "    print('پس‌انداز')"
+          ],
+          "language": "python",
+          "hints": [
+            "خطی که مقدار را تعریف می‌کند معمولاً زودتر می‌آید."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی این کد چیست؟",
+          "explanation": "مقادیر را قدم‌به‌قدم دنبال کن و خروجی print را حدس بزن.",
+          "code": "money = 5000\nif money >= 10000:\n    print('می‌خرم')\nelse:\n    print('پس‌انداز')",
+          "options": [
+            "پس‌انداز",
+            "خطای نحوی",
+            "هیچ خروجی ندارد"
+          ],
+          "answer": "پس‌انداز",
+          "language": "python",
+          "hints": [
+            "هر دستور print یک بخش از خروجی می‌سازد."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که خروجی «پس‌انداز» را تولید کند.",
+          "explanation": "اجرا کن و خروجی واقعی را با مقدار مورد انتظار مقایسه کن.",
+          "starter_code": "print(\"پس‌انداز\")",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "پس‌انداز"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "برای نمایش مقدار از print() استفاده کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "مثال درس را اجرا کن و خروجی را بررسی کن.",
+          "explanation": "خروجی باید دقیقاً با مقدار مورد انتظار برابر باشد.",
+          "starter_code": "money = 5000\nif money >= 10000:\n    print('می‌خرم')\nelse:\n    print('پس‌انداز')",
+          "tests": [
+            {
+              "stdin": "",
+              "expected_output": "پس‌انداز"
+            }
+          ],
+          "hidden": false,
+          "language": "python",
+          "hints": [
+            "تورفتگی خط‌های داخل if و حلقه را حفظ کن."
+          ],
+          "visualize": true,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
+        }
+      ]
+    }
+  ]
+}
