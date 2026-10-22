@@ -1,0 +1,1 @@
+window.toFaDigits=value=>String(value).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
