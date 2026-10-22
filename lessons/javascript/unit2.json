@@ -1,0 +1,158 @@
+{
+  "course": "javascript",
+  "unit": {
+    "id": "unit2",
+    "title": "عملگرها و شرط",
+    "description": "تصمیم‌گیری را به کد یاد بده."
+  },
+  "lessons": [
+    {
+      "id": "js-2-1",
+      "title": "عملگرهای ریاضی",
+      "intro": "در جاوااسکریپت + جمع، - تفریق، * ضرب و / تقسیم می‌کند. پرانتز ترتیب محاسبه را مشخص می‌کند.\nمثال: const total = 3 * (2 + 1);",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "عملگر ضرب کدام است؟",
+          "explanation": "ستاره برای ضرب استفاده می‌شود.",
+          "options": [
+            "*",
+            "+",
+            "/"
+          ],
+          "answer": "*"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "دو عدد را جمع کن.",
+          "explanation": "از عملگر + استفاده کن.",
+          "code": "const total = 4 ____ 3;",
+          "answer": "+"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "نتیجه 10 / 2 چیست؟",
+          "explanation": "ده تقسیم بر دو برابر پنج است.",
+          "options": [
+            "5",
+            "8",
+            "20"
+          ],
+          "answer": "5"
+        },
+        {
+          "type": "reorder",
+          "prompt": "عبارت را مرتب کن.",
+          "explanation": "عبارت کامل یک انتساب است.",
+          "lines": [
+            "= 2 + 3;",
+            "const result"
+          ],
+          "answer": [
+            "const result",
+            "= 2 + 3;"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "اول ضرب انجام می‌شود.",
+          "code": "console.log(2 + 3 * 2);",
+          "options": [
+            "8",
+            "10",
+            "12"
+          ],
+          "answer": "8"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "متغیر answer را برابر 12 تقسیم بر 3 قرار بده.",
+          "explanation": "از / برای تقسیم استفاده کن.",
+          "starter_code": "const answer = 12 / 3;",
+          "tests": [
+            {
+              "expected_output": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "js-2-2",
+      "title": "شرط if و else",
+      "intro": "با if بررسی می‌کنیم شرطی درست است یا نه. اگر درست باشد بلوک if اجرا می‌شود؛ در غیر این صورت می‌توانیم از else استفاده کنیم.\nمثال:\nif (score >= 10) { console.log('قبول'); } else { console.log('تمرین بیشتر'); }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "برای بررسی شرط از کدام کلمه استفاده می‌کنیم؟",
+          "explanation": "if آغاز یک شرط است.",
+          "options": [
+            "if",
+            "when",
+            "check"
+          ],
+          "answer": "if"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "اگر شرط برقرار نبود، کدام کلمه می‌آید؟",
+          "explanation": "else مسیر جایگزین است.",
+          "code": "if (ready) {} ____ {}",
+          "answer": "else"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "عملگر بزرگ‌تر یا مساوی کدام است؟",
+          "explanation": ">= یعنی بزرگ‌تر یا مساوی.",
+          "options": [
+            ">=",
+            "=>",
+            "=<"
+          ],
+          "answer": ">="
+        },
+        {
+          "type": "reorder",
+          "prompt": "شرط را مرتب کن.",
+          "explanation": "if شرط را در پرانتز می‌گیرد.",
+          "lines": [
+            "console.log('بله');",
+            "if (ok) {",
+            "}"
+          ],
+          "answer": [
+            "if (ok) {",
+            "console.log('بله');",
+            "}"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "عدد 8 از 5 بزرگ‌تر است، پس if اجرا می‌شود.",
+          "code": "if (8 > 5) console.log('yes'); else console.log('no');",
+          "options": [
+            "yes",
+            "no",
+            "هیچ‌کدام"
+          ],
+          "answer": "yes"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "اگر age بزرگ‌تر یا مساوی 18 بود، متن adult را چاپ کن.",
+          "explanation": "شرط را داخل if بنویس.",
+          "starter_code": "if (age >= 18) { console.log('adult'); }",
+          "tests": [
+            {
+              "expected_output": "adult"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
