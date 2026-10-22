@@ -21,14 +21,30 @@
             "src",
             "alt"
           ],
-          "answer": "href"
+          "answer": "href",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "ویژگی مقصد لینک را کامل کن.",
           "explanation": "از href استفاده می‌شود.",
           "code": "<a ____=\"/about\">درباره</a>",
-          "answer": "href"
+          "answer": "href",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -39,7 +55,15 @@
             "<linkto>",
             "<url>"
           ],
-          "answer": "<a>"
+          "answer": "<a>",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -52,7 +76,15 @@
           "answer": [
             "<a href=\"/\">خانه",
             "</a>"
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -64,7 +96,15 @@
             "/",
             "href"
           ],
-          "answer": "خانه"
+          "answer": "خانه",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -75,7 +115,15 @@
             {
               "expected_output": "<a href=\"/help\">راهنما</a>"
             }
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "web_exercise",
@@ -130,14 +178,30 @@
             "href",
             "titleonly"
           ],
-          "answer": "alt"
+          "answer": "alt",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "مسیر تصویر را با ویژگی درست مشخص کن.",
           "explanation": "src مسیر فایل تصویر را مشخص می‌کند.",
           "code": "<img ____=\"photo.jpg\" alt=\"عکس\">",
-          "answer": "src"
+          "answer": "src",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -148,7 +212,15 @@
             "<picturetext>",
             "<photo>"
           ],
-          "answer": "<img>"
+          "answer": "<img>",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -161,7 +233,15 @@
           "answer": [
             "<img src=\"flower.jpg\"",
             "alt=\"گل\""
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -173,7 +253,15 @@
             "رنگ صفحه",
             "ساخت لینک"
           ],
-          "answer": "توضیح تصویر"
+          "answer": "توضیح تصویر",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -184,7 +272,15 @@
             {
               "expected_output": "<img src=\"sky.jpg\" alt=\"آسمان\">"
             }
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     },
@@ -203,14 +299,30 @@
             "database",
             "password_hash"
           ],
-          "answer": "href"
+          "answer": "href",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "کلمهٔ کلیدی مثال را کامل کن.",
           "explanation": "این واژه در مثال آموزشی استفاده شده است.",
           "code": "<____>محتوا</href>",
-          "answer": "href"
+          "answer": "href",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -221,7 +333,15 @@
             "SQL فقط",
             "شبکه"
           ],
-          "answer": "HTML و CSS"
+          "answer": "HTML و CSS",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -234,7 +354,15 @@
           "answer": [
             "<p>سلام",
             "</p>"
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -246,7 +374,15 @@
             "p",
             "هیچ‌چیز"
           ],
-          "answer": "سلام وب"
+          "answer": "سلام وب",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -257,7 +393,15 @@
             {
               "expected_output": "<p>تمرین</p>"
             }
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     },
@@ -276,14 +420,30 @@
             "حذف همه تگ‌ها",
             "اجرای کد روی سرور"
           ],
-          "answer": "تمرین مفهوم در نمونه واقعی"
+          "answer": "تمرین مفهوم در نمونه واقعی",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "fill_blank",
           "prompt": "نام ویژگی یا تگ اصلی این درس را بنویس.",
           "explanation": "نام اصلی در مثال همین درس دیده می‌شود.",
           "code": "نام مفهوم: ____",
-          "answer": "href"
+          "answer": "href",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "multiple_choice",
@@ -294,7 +454,15 @@
             "نادیده گرفتن خطا",
             "حذف عنوان"
           ],
-          "answer": "بررسی نتیجه"
+          "answer": "بررسی نتیجه",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": false
+          }
         },
         {
           "type": "reorder",
@@ -307,7 +475,15 @@
           "answer": [
             "<h1>عنوان",
             "</h1>"
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "none",
+            "show_expected": false,
+            "live": true
+          }
         },
         {
           "type": "predict_output",
@@ -319,7 +495,15 @@
             "h1",
             "کد اجرا نمی‌شود"
           ],
-          "answer": "کدفا"
+          "answer": "کدفا",
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         },
         {
           "type": "code_exercise",
@@ -330,7 +514,15 @@
             {
               "expected_output": "<h1>کدفا</h1>"
             }
-          ]
+          ],
+          "language": "html",
+          "hints": [],
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     }
