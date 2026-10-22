@@ -70,7 +70,7 @@
           "type": "code_exercise",
           "prompt": "متغیر answer را برابر 12 تقسیم بر 3 قرار بده.",
           "explanation": "از / برای تقسیم استفاده کن.",
-          "starter_code": "const answer = 12 / 3;",
+          "starter_code": "const answer = 12 / 3;\nconsole.log(answer);",
           "tests": [
             {
               "expected_output": "4"
@@ -145,7 +145,7 @@
           "type": "code_exercise",
           "prompt": "اگر age بزرگ‌تر یا مساوی 18 بود، متن adult را چاپ کن.",
           "explanation": "شرط را داخل if بنویس.",
-          "starter_code": "if (age >= 18) { console.log('adult'); }",
+          "starter_code": "const age = 18;\nif (age >= 18) { console.log('adult'); }",
           "tests": [
             {
               "expected_output": "adult"
