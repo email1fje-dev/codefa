@@ -1,21 +1,8 @@
-window.runCode = code => new Promise(resolve => {
-  const workerCode = `self.onmessage = ({data}) => {
-    const logs = [];
-    const originalLog = console.log;
-    try {
-      console.log = (...values) => logs.push(values.join(' '));
-      new Function(data)();
-      console.log = originalLog;
-      self.postMessage({ok:true, output:logs.join('\\n')});
-    } catch (error) {
-      self.postMessage({ok:false, output:String(error && error.message || 'خطای اجرا')});
-    }
-  };`;
-  const blob = new Blob([workerCode], {type:'text/javascript'});
-  const url = URL.createObjectURL(blob);
-  const worker = new Worker(url);
-  const timer = setTimeout(() => { worker.terminate(); URL.revokeObjectURL(url); resolve({ok:false,output:'زمان اجرا بیشتر از ۳ ثانیه شد.'}); }, 3000);
-  worker.onmessage = event => { clearTimeout(timer); worker.terminate(); URL.revokeObjectURL(url); resolve(event.data); };
-  worker.onerror = () => { clearTimeout(timer); worker.terminate(); URL.revokeObjectURL(url); resolve({ok:false,output:'اجرای کد ناموفق بود.'}); };
-  worker.postMessage(String(code));
-});
+(() => {
+  let frame=null,ready=false,pending=null;
+  const waiters=new Map();
+  function makeFrame(){if(frame)frame.remove();frame=document.createElement('iframe');frame.id='lesson-sandbox-frame';frame.src='/sandbox';frame.setAttribute('sandbox','allow-scripts');frame.title='محیط ایزوله اجرای کد';frame.style.cssText='position:absolute;width:1px;height:1px;left:-9999px;border:0';document.body.appendChild(frame);ready=false;frame.addEventListener('load',()=>{ready=false});return frame}
+  function send(payload){if(!frame)makeFrame();if(!ready){pending=payload;return;}frame.contentWindow.postMessage({channel:'codefa-parent',type:'run',...payload},'*')}
+  window.addEventListener('message',e=>{if(!frame||e.source!==frame.contentWindow||e.origin!=='null')return;const m=e.data;if(!m||m.channel!=='codefa-sandbox')return;if(m.type==='ready'){ready=true;if(pending){const p=pending;pending=null;send(p)}return}if(m.type==='result'){const waiter=waiters.get(m.requestId||'latest');if(waiter){clearTimeout(waiter.timer);waiters.delete(m.requestId||'latest');waiter.resolve(m)}}});
+  window.runCode=(code,options={})=>new Promise(resolve=>{const language=options.language||'javascript';const timeout=Number(options.timeoutSeconds)||(language==='python'?8:3);const id=String(Date.now())+Math.random().toString(16).slice(2);const payload=language==='web'?{language,files:code,requestId:id}:{language,code:String(code),stdin:options.stdin||'',trace:!!options.trace,requestId:id};const timer=setTimeout(()=>{waiters.delete(id);makeFrame();resolve({ok:false,output:'برنامه بیش از حد طول کشید (احتمالاً حلقه‌ی بی‌نهایت).'});},timeout*1000);waiters.set(id,{resolve,timer});if(!frame)makeFrame();if(!ready){pending=payload;const old=frame;const onLoad=()=>{old.removeEventListener('load',onLoad);};old.addEventListener('load',onLoad)}else send(payload);});
+})();
