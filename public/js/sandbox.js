@@ -56,7 +56,7 @@
   function jsError(err) {
     const raw=String(err?.stack||err?.message||err||'خطای ناشناخته');
     const type=String(err?.name||'Error');
-    const line=Number((raw.match(/<anonymous>:(\d+):(\d+)/)||raw.match(/line (\d+)/i)||[])[1]||0);
+    const line=Math.max(0,Number((raw.match(/<anonymous>:(\d+):(\d+)/)||raw.match(/line (\d+)/i)||[])[1]||0)-2);
     return {raw,explanation:errorFa[type]||'کد را از نظر پرانتزها، نام متغیرها و نوع داده‌ها بررسی کن.',line};
   }
   async function runPython(msg) {
@@ -103,7 +103,7 @@ finally:
       catch(e){tell('result',{requestId:msg.requestId,ok:false,output:bounded(output),error:pythonError(e)});}
       return;
     }
-    try { await py.runPythonAsync(prelude+String(msg.code||'')); tell('result',{requestId:msg.requestId,ok:true,output:bounded(output)}); }
+    try { py.globals.set('__codefa_user_code',String(msg.code||'')); await py.runPythonAsync(prelude+"exec(compile(__codefa_user_code, '<user>', 'exec'), {'__name__':'__main__'})"); tell('result',{requestId:msg.requestId,ok:true,output:bounded(output)}); }
     catch(e){tell('result',{requestId:msg.requestId,ok:false,output:bounded(output),error:pythonError(e)});}
   }
   function runJavaScript(msg) {
@@ -122,7 +122,7 @@ finally:
       const files=msg.files||{};
       previewEl.innerHTML='';
       const style=document.createElement('style');style.textContent=String(files.css||'');previewEl.appendChild(style);
-      const frame=document.createElement('div');frame.className='user-web-content';frame.innerHTML=String(files.html||'<p>کد HTML را بنویس.</p>');previewEl.appendChild(frame);
+      const frame=document.createElement('div');frame.className='user-web-content';const parsed=new DOMParser().parseFromString(String(files.html||'<p>کد HTML را بنویس.</p>'),'text/html');frame.innerHTML=parsed.body.innerHTML;previewEl.appendChild(frame);
       const logs=[];const fakeConsole={log:(...a)=>logs.push(a.map(String).join(' ')),info:(...a)=>logs.push('[اطلاعات] '+a.map(String).join(' ')),warn:(...a)=>logs.push('[هشدار] '+a.map(String).join(' ')),error:(...a)=>logs.push('[خطا] '+a.map(String).join(' '))};
       const start=performance.now();
       if(String(files.js||'').trim())new Function('console','root','"use strict";\n'+String(files.js))(fakeConsole,frame);
