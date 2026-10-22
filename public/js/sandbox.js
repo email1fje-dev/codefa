@@ -2,7 +2,7 @@
   const status = document.getElementById('status');
   const outputEl = document.getElementById('output');
   const previewEl = document.getElementById('preview');
-  let pyodidePromise = null;
+  let pyodidePromise = null;\n  const originalFetch = window.fetch.bind(window);
   let output = '';
   const MAX_OUTPUT = 100 * 1024;
   const errorFa = {
@@ -25,7 +25,7 @@
   function tell(type, data={}) { parent.postMessage({channel:'codefa-sandbox',type,...data}, '*'); }
   function blockNetwork() {
     const denied = () => Promise.reject(new Error('در محیط ایزوله دسترسی شبکه غیرفعال است.'));
-    try { Object.defineProperty(window,'fetch',{value:denied,writable:false,configurable:false}); } catch {}
+    try { window.fetch = denied; } catch {}
     try { window.XMLHttpRequest = class { constructor(){throw new Error('دسترسی شبکه در محیط ایزوله غیرفعال است.')} }; } catch {}
     try { window.WebSocket = class { constructor(){throw new Error('دسترسی شبکه در محیط ایزوله غیرفعال است.')} }; } catch {}
     try { window.EventSource = class { constructor(){throw new Error('دسترسی شبکه در محیط ایزوله غیرفعال است.')} }; } catch {}
