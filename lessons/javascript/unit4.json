@@ -77,7 +77,14 @@
             {
               "expected_output": "5"
             }
-          ]
+          ],
+          "language": "javascript",
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     },
@@ -150,7 +157,14 @@
             {
               "expected_output": "4"
             }
-          ]
+          ],
+          "language": "javascript",
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     },
@@ -223,7 +237,14 @@
             {
               "expected_output": "6"
             }
-          ]
+          ],
+          "language": "javascript",
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     },
@@ -296,7 +317,14 @@
             {
               "expected_output": "سلام"
             }
-          ]
+          ],
+          "language": "javascript",
+          "visualize": false,
+          "preview": {
+            "mode": "console",
+            "show_expected": true,
+            "live": false
+          }
         }
       ]
     }
