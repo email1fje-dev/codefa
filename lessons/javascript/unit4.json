@@ -46,9 +46,9 @@
           "prompt": "تابع را مرتب کن.",
           "explanation": "نام و پرانتز بعد از function می‌آید.",
           "lines": [
+            "}",
             "return 2;",
-            "function answer() {",
-            "}"
+            "function answer() {"
           ],
           "answer": [
             "function answer() {",
