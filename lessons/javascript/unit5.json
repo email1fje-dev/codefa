@@ -47,13 +47,11 @@
           "explanation": "مقادیر داخل کروشه قرار می‌گیرند.",
           "lines": [
             "'blue'];",
-            "const colors = ['red',",
-            ""
+            "const colors = ['red',"
           ],
           "answer": [
             "const colors = ['red',",
-            "'blue'];",
-            ""
+            "'blue'];"
           ]
         },
         {
@@ -121,9 +119,9 @@
           "prompt": "آبجکت را مرتب کن.",
           "explanation": "ویژگی‌ها داخل آکولاد می‌آیند.",
           "lines": [
+            "};",
             "age: 13",
-            "const user = {",
-            "};"
+            "const user = {"
           ],
           "answer": [
             "const user = {",
