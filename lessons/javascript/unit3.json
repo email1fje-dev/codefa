@@ -155,6 +155,152 @@
           ]
         }
       ]
+    },
+    {
+      "id": "javascript-unit3-3",
+      "title": "توقف و ردکردن تکرار",
+      "intro": "break حلقه را متوقف می‌کند و continue ادامه همان دور را رد می‌کند و به دور بعد می‌رود. این دستورها فقط باید وقتی استفاده شوند که جریان حلقه را واضح‌تر می‌کنند.\nمثال:\nfor(let i=0;i<5;i++){ if(i===2) continue; console.log(i); }",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "این درس درباره کدام مفهوم است؟",
+          "explanation": "عنوان و مثال، مفهوم اصلی درس را نشان می‌دهند.",
+          "options": [
+            "کنترل حلقه",
+            "HTML image",
+            "رنگ پس‌زمینه"
+          ],
+          "answer": "کنترل حلقه"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "واژه کلیدی درس را کامل کن.",
+          "explanation": "واژه کلیدی در مثال همین درس به کار رفته است.",
+          "code": "const key = ____;",
+          "answer": "continue"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "جاوااسکریپت معمولاً در کدام محیط اجرا می‌شود؟",
+          "explanation": "این دوره مفاهیم پایه زبان جاوااسکریپت را در مرورگر تمرین می‌کند.",
+          "options": [
+            "مرورگر",
+            "فقط فایل CSS",
+            "فقط دیتابیس"
+          ],
+          "answer": "مرورگر"
+        },
+        {
+          "type": "reorder",
+          "prompt": "تعریف متغیر را مرتب کن.",
+          "explanation": "ابتدا const و سپس نام متغیر و مقدار می‌آید.",
+          "lines": [
+            "= 7;",
+            "const count"
+          ],
+          "answer": [
+            "const count",
+            "= 7;"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "console.log مقدار داخل پرانتز را چاپ می‌کند.",
+          "code": "console.log(2 + 3);",
+          "options": [
+            "5",
+            "23",
+            "خطا"
+          ],
+          "answer": "5"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "کدی بنویس که عدد 6 را در خروجی چاپ کند.",
+          "explanation": "از console.log برای نمایش مقدار استفاده کن.",
+          "starter_code": "console.log(6);",
+          "tests": [
+            {
+              "expected_output": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "javascript-unit3-4",
+      "title": "چالش کوتاه: توقف و ردکردن تکرار",
+      "intro": "این درس یک تمرین کوتاه برای استفاده از توقف و ردکردن تکرار است. کد را بخوان، حدس بزن چه اتفاقی می‌افتد و بعد با تغییر یک مقدار نتیجه را بررسی کن.\nمثال:\nfor(let i=0;i<5;i++){ if(i===2) continue; console.log(i); }",
+      "xp_reward": 20,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "بهترین راه یادگیری این مفهوم چیست؟",
+          "explanation": "خواندن مثال و تغییر آن در کنار تمرین باعث تثبیت یادگیری می‌شود.",
+          "options": [
+            "خواندن و تغییر مثال",
+            "حفظ‌کردن بدون تمرین",
+            "نادیده گرفتن خروجی"
+          ],
+          "answer": "خواندن و تغییر مثال"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "دستور چاپ خروجی را کامل کن.",
+          "explanation": "برای چاپ مقدار در کنسول از console.log استفاده می‌شود.",
+          "code": "console.____('سلام');",
+          "answer": "log"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام مقدار از نوع number است؟",
+          "explanation": "عدد بدون کوتیشن از نوع number است.",
+          "options": [
+            "42",
+            "'42'",
+            "'چهارده'"
+          ],
+          "answer": "42"
+        },
+        {
+          "type": "reorder",
+          "prompt": "دستور چاپ را مرتب کن.",
+          "explanation": "نام تابع و آرگومان داخل پرانتز قرار می‌گیرند.",
+          "lines": [
+            "('OK');",
+            "console.log"
+          ],
+          "answer": [
+            "console.log",
+            "('OK');"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "خروجی چیست؟",
+          "explanation": "متن داخل کوتیشن چاپ می‌شود.",
+          "code": "console.log('CodeFa');",
+          "options": [
+            "CodeFa",
+            "console",
+            "خطا"
+          ],
+          "answer": "CodeFa"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "متن «سلام» را چاپ کن.",
+          "explanation": "از console.log و رشته استفاده کن.",
+          "starter_code": "console.log('سلام');",
+          "tests": [
+            {
+              "expected_output": "سلام"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
