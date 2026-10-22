@@ -1,0 +1,156 @@
+{
+  "course": "html-css",
+  "unit": {
+    "id": "unit2",
+    "title": "متن، لینک و تصویر",
+    "description": "به صفحه‌ات لینک و تصویر اضافه کن."
+  },
+  "lessons": [
+    {
+      "id": "html-2-1",
+      "title": "لینک‌ها",
+      "intro": "تگ a لینک می‌سازد و مقصد آن در ویژگی href نوشته می‌شود. متن بین تگ باز و بسته، چیزی است که کاربر می‌بیند.\nمثال: <a href=\"https://example.com\">سایت نمونه</a>",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "مقصد لینک در کدام ویژگی می‌آید؟",
+          "explanation": "ویژگی href نشانی مقصد را نگه می‌دارد.",
+          "options": [
+            "href",
+            "src",
+            "alt"
+          ],
+          "answer": "href"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "ویژگی مقصد لینک را کامل کن.",
+          "explanation": "از href استفاده می‌شود.",
+          "code": "<a ____=\"/about\">درباره</a>",
+          "answer": "href"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "تگ لینک کدام است؟",
+          "explanation": "a مخفف anchor است.",
+          "options": [
+            "<a>",
+            "<linkto>",
+            "<url>"
+          ],
+          "answer": "<a>"
+        },
+        {
+          "type": "reorder",
+          "prompt": "تگ لینک را درست مرتب کن.",
+          "explanation": "ویژگی در تگ آغازین قرار می‌گیرد.",
+          "lines": [
+            "</a>",
+            "<a href=\"/\">خانه"
+          ],
+          "answer": [
+            "<a href=\"/\">خانه",
+            "</a>"
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "متن قابل‌کلیک چیست؟",
+          "explanation": "متن داخل تگ a دیده می‌شود.",
+          "code": "<a href=\"/\">خانه</a>",
+          "options": [
+            "خانه",
+            "/",
+            "href"
+          ],
+          "answer": "خانه"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "لینکی به /help با متن راهنما بنویس.",
+          "explanation": "نشانی در href و متن داخل تگ قرار می‌گیرد.",
+          "starter_code": "<a href=\"/help\">راهنما</a>",
+          "tests": [
+            {
+              "expected_output": "<a href=\"/help\">راهنما</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-2-2",
+      "title": "تصویرها",
+      "intro": "تگ img برای نمایش تصویر است. ویژگی src مسیر تصویر و alt توضیح متنی تصویر است؛ alt برای دسترس‌پذیری و زمانی که تصویر بارگذاری نشود مهم است. تگ img تگ بسته جداگانه ندارد.\nمثال: <img src=\"cat.png\" alt=\"گربه روی صندلی\">",
+      "xp_reward": 15,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "توضیح متنی تصویر در کدام ویژگی است؟",
+          "explanation": "alt متن جایگزین تصویر است.",
+          "options": [
+            "alt",
+            "href",
+            "titleonly"
+          ],
+          "answer": "alt"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "مسیر تصویر را با ویژگی درست مشخص کن.",
+          "explanation": "src مسیر فایل تصویر را مشخص می‌کند.",
+          "code": "<img ____=\"photo.jpg\" alt=\"عکس\">",
+          "answer": "src"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "کدام تگ تصویر می‌سازد؟",
+          "explanation": "img برای تصویر است.",
+          "options": [
+            "<img>",
+            "<picturetext>",
+            "<photo>"
+          ],
+          "answer": "<img>"
+        },
+        {
+          "type": "reorder",
+          "prompt": "ویژگی‌ها را در تگ قرار بده.",
+          "explanation": "ویژگی‌ها در تگ img نوشته می‌شوند.",
+          "lines": [
+            "alt=\"گل\"",
+            "<img src=\"flower.jpg\""
+          ],
+          "answer": [
+            "<img src=\"flower.jpg\"",
+            "alt=\"گل\""
+          ]
+        },
+        {
+          "type": "predict_output",
+          "prompt": "alt چه زمانی کمک می‌کند؟",
+          "explanation": "متن جایگزین دسترس‌پذیری را بهتر می‌کند.",
+          "code": "<img src=\"x.png\" alt=\"گل قرمز\">",
+          "options": [
+            "توضیح تصویر",
+            "رنگ صفحه",
+            "ساخت لینک"
+          ],
+          "answer": "توضیح تصویر"
+        },
+        {
+          "type": "code_exercise",
+          "prompt": "یک تصویر با alt «آسمان» بنویس.",
+          "explanation": "img باید src و alt داشته باشد.",
+          "starter_code": "<img src=\"sky.jpg\" alt=\"آسمان\">",
+          "tests": [
+            {
+              "expected_output": "<img src=\"sky.jpg\" alt=\"آسمان\">"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
