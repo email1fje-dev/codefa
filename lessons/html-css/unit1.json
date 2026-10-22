@@ -78,6 +78,42 @@
               "expected_output": "<h1>شروع من</h1>"
             }
           ]
+        },
+        {
+          "type": "web_exercise",
+          "prompt": "بساز و بررسی کن: یک کارت وب با عنوان و متن",
+          "explanation": "با HTML ساختار و با CSS ظاهر را تعریف می‌کنی. چک‌ها وجود عنوان و متن کارت را بررسی می‌کنند.",
+          "hints": [
+            "برای عنوان از h2 استفاده کن.",
+            "متن توضیح را داخل p قرار بده."
+          ],
+          "language": "html",
+          "visualize": false,
+          "preview": {
+            "mode": "html",
+            "show_expected": true,
+            "live": true
+          },
+          "starter_html": "<article class=\"card\"><h2>کدفا</h2><p>یادگیری برنامه‌نویسی</p></article>",
+          "starter_css": ".card { padding: 16px; border-radius: 12px; background: #e8f7ed; color: #174d2b; }",
+          "expected_html": "<article class=\"card\"><h2>کدفا</h2><p>یادگیری برنامه‌نویسی</p></article>",
+          "checks": [
+            {
+              "selector": "article.card",
+              "exists": true,
+              "count_min": 1
+            },
+            {
+              "selector": "h2",
+              "exists": true,
+              "text_contains": "کدفا"
+            },
+            {
+              "selector": "p",
+              "exists": true,
+              "text_contains": "یادگیری برنامه‌نویسی"
+            }
+          ]
         }
       ]
     },
